@@ -1,4 +1,5 @@
 {
-    "navigationBarTitleText": "仪表盘"
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar"
   }
-  
+}
