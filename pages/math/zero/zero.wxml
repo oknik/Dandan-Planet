@@ -5,4 +5,33 @@
         background="#c8e8e8"
         color="#333"
     ></navigation-bar>
+
+    <view class="image-row">
+        <image class="image" src="{{imageUrl}}"></image>
+        <image class="image" src="{{eggUrl}}"></image>
+    </view>
+    
+    <view class="text-row">
+        <text class="large-text">0像鸡蛋圆又圆</text>
+        <image class="play-button" src="{{playUrl}}"></image>
+    </view>
+
+    <view class="canvas-container">
+        <canvas 
+        id="myCanvas" 
+        type="2d" 
+        style="border: 1px solid; width: 300px; height: 300px;" 
+        bindtouchstart="handleTouchStart" 
+        bindtouchmove="handleTouchMove" 
+        bindtouchend="handleTouchEnd"
+        ></canvas>
+    </view>
+
+    <!-- 工具栏 -->
+    <view class="toolbar">
+        <button bindtap="toggleEraser">{{ isEraser ? '切换到画笔' : '切换到橡皮擦' }}</button>
+        <button bindtap="clearCanvas">清除画布</button> <!-- 新增清除按钮 -->
+    </view>
+
+
 </view>

@@ -1,7 +1,51 @@
 .container {
-    display: flex;
-    height: 100vh;
-    justify-content: flex-start;
-    position: relative;
-    background-color: #c8e8e8;
-  }
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #c8e8e8;
+}
+
+.navigation-bar {
+  width: 95%;
+  margin-top: -90px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center; /* 图片水平居中 */
+  margin-bottom: 20px;     /* 图片和文字之间的间距 */
+}
+
+.image {
+  width: 150px;  /* 控制图片的宽度 */
+  height: 150px; /* 控制图片的高度 */
+  margin: 0 10px; /* 图片之间的间距 */
+}
+
+.text-row {
+  display: flex;
+  justify-content: center; /* 文字和播放按钮水平居中 */
+  align-items: center;     /* 文字和播放按钮垂直对齐 */
+  margin-bottom: 20px;
+}
+
+.large-text {
+  font-size: 24px; /* 控制文字的大小 */
+  margin-right: 10px; /* 文字和播放按钮之间的间距 */
+}
+
+.play-button {
+  width: 35px;  /* 播放按钮的宽度 */
+  height: 35px; /* 播放按钮的高度 */
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toolbar {
+  margin-top: 10px;
+}
