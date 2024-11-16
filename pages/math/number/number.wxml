@@ -1,0 +1,22 @@
+<view class="container">
+  <navigation-bar
+    class="navigation-bar"
+    back="{{true}}"
+    background="#c8e8e8"
+    color="#333"
+  ></navigation-bar>
+
+
+  <view class="title">
+    <image class="title-img" src="{{titleUrl}}"></image>
+  </view>
+
+  <view class="number-container">
+    <block wx:for="{{imageData}}" wx:key="index">
+      <view class="image-item" data-path="{{item.path}}" bindtap="onImageTap">
+        <image class="rounded-image" src="{{item.imageUrl}}" mode="aspectFit"></image>
+      </view>
+    </block>
+  </view>
+
+</view>

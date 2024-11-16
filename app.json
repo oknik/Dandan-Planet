@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/dashboard/dashboard"
+    "pages/dashboard/dashboard",
+    "pages/math/number/number",
+    "pages/math/zero/zero"
   ],
   "window": {
     "navigationBarTextStyle": "black",
