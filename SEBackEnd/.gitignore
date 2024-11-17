@@ -1,0 +1,4 @@
+.idea/
+__pycache__/
+src/
+generate_speech.py
