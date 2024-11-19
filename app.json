@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/dashboard/dashboard",
     "pages/math/number/number",
-    "pages/math/zero/zero"
+    "pages/math/detail/detail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
