@@ -8,11 +8,11 @@
 
     <view class="image-row">
         <image class="image" src="{{imageUrl}}"></image>
-        <image class="image" src="{{eggUrl}}"></image>
+        <image class="image" src="{{picUrl}}"></image>
     </view>
     
     <view class="text-row">
-        <text class="large-text">0像鸡蛋圆又圆</text>
+        <image class="text-pic" src="{{textUrl}}"></image>
         <image class="play-button" src="{{playUrl}}"></image>
     </view>
 
@@ -30,7 +30,8 @@
     <!-- 工具栏 -->
     <view class="toolbar">
         <button bindtap="toggleEraser">{{ isEraser ? '切换到画笔' : '切换到橡皮擦' }}</button>
-        <button bindtap="clearCanvas">清除画布</button> <!-- 新增清除按钮 -->
+        <!--<button bindtap="clearCanvas">清除画布</button>-->
+        <image class="clear-button" bindtap="clearCanvas" src="{{clearUrl}}"></image>
     </view>
 
 
