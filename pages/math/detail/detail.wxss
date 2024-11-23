@@ -8,7 +8,7 @@
 
 .navigation-bar {
   width: 95%;
-  margin-top: -90px;
+  margin-top: -155px;
 }
 
 .image-row {
@@ -18,9 +18,9 @@
 }
 
 .image {
-  width: 150px;
-  height: 150px;
-  margin: 0 10px;
+  width: 200px;
+  height: 200px;
+  margin: 0 30px;
 }
 
 .text-row {
@@ -31,13 +31,13 @@
 }
 
 .text-pic {
-  width: 250px;
-  height:50px;
+  width: 500px;
+  height: 100px;
 }
 
 .play-button {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 }
 
 .canvas-container {

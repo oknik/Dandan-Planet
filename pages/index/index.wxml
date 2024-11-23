@@ -3,7 +3,7 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 -->
 
-<view class="container" style="background-image: url('{{backgroundUrl}}')">
+<view class="container" style="background-image: url('{{newUrl}}')">
   <view class="name">
     <image class="name" src='{{nameUrl}}'></image>
   </view>
@@ -52,13 +52,11 @@
       <button class="code-button" bindtap="sendCode">获取</button>
     </view>
 
+    <view class="button-container">
+      <button class="login-button" bindtap="onLogin">登录</button>
+      <button class="register-button" bindtap="onRegister">注册</button>
+    </view>
   </view>
-
-  <view class="button-container">
-    <button class="login-button" bindtap="onLogin">登录</button>
-    <button class="register-button" bindtap="onRegister">注册</button>
-  </view>
-
 
 </view>
 

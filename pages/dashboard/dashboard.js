@@ -7,7 +7,7 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/67349ebcd29ded1a8c9b8610.jpg"
   },
   {
-    path: "math/number/number",
+    path: "math/select/select",
     name: "数学",
     imageUrl: "https://pic.imgdb.cn/item/67349071d29ded1a8c8f8926.jpg"
   },

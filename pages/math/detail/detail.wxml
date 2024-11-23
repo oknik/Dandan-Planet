@@ -20,7 +20,7 @@
         <canvas 
         id="myCanvas" 
         type="2d" 
-        style="border: 1px solid; width: 300px; height: 300px;" 
+        style="border: 1px solid; width: 400px; height: 400px;" 
         bindtouchstart="handleTouchStart" 
         bindtouchmove="handleTouchMove" 
         bindtouchend="handleTouchEnd"
