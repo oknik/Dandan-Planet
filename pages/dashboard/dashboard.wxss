@@ -7,8 +7,8 @@
 }
 
 .logo-img {
-  width: 100px;
-  height: 30px;
+  width: 180px;
+  height: 50px;
 }
 
 .info-container {
@@ -22,15 +22,16 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 .avatar {
   position: absolute;
   top: 20px;
   right: 12px;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 2px solid #c8e8e8;
 }
@@ -41,7 +42,7 @@
 }
 
 .user-name {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   color: #fdcd00;
   text-shadow: 1px 1px 2px #666;
@@ -82,17 +83,19 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 75%;
   margin: 20px auto;
+  font-size: 20px;
 }
 
 .task-title {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: bold;
   color: #32a4e6;
+  margin-left: 10px;
   margin-bottom: 20px;
 }
 
 .task-content {
-  margin-top: 10px;
+  margin-top: 20px;
   padding-left: 10px;
   color: #666;
 }
@@ -119,14 +122,14 @@
 }
 
 .circle-img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
 .feature-name {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 20px;
   color: #32a4e6;
   text-align: center;
 }

@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #c8e8e8;
+  }
+  
+  .navigation-bar {
+    width: 95%;
+    margin-top: -155px;
+  }

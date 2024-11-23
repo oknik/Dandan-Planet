@@ -2,8 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/dashboard/dashboard",
+    "pages/math/select/select",
     "pages/math/number/number",
-    "pages/math/detail/detail"
+    "pages/math/detail/detail",
+    "pages/math/compare/compare"
   ],
   "window": {
     "navigationBarTextStyle": "black",
