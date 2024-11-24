@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/dashboard/dashboard",
     "pages/Chinese/characters",
-    "pages/learnCharacter/learnCharacter"
+    "pages/learnCharacter/learnCharacter",
+    "pages/math/select/select",
+    "pages/math/number/number",
+    "pages/math/detail/detail",
+    "pages/math/compare/compare"
   ],
   "window": {
     "navigationBarTextStyle": "black",

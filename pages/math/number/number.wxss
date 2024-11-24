@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #c8e8e8;
+  }
+
+  .navigation-bar {
+    width: 95%;
+    margin-top: -155px;
+  }
+
+  .title {
+    margin-top: -10px;
+  }
+
+  .title-img {
+    width: 300px;
+    height: 100px;
+  }
+
+  .number-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 700px;
+    overflow-y: scroll;
+  }
+  
+  .image-item {
+    width: 180px; 
+    height: 180px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+   
+  

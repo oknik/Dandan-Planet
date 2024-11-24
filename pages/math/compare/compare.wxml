@@ -1,0 +1,8 @@
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+</view>

@@ -31,7 +31,7 @@
 
 <view class="content">
   <block wx:for="{{features}}" wx:key="name">
-    <view class="feature-item" bindtap="handleItemClick" data-url="{{item.url}}">
+    <view class="feature-item" bindtap="goToPage" data-path="{{item.path}}">
       <image class="circle-img" src="{{item.imageUrl}}"></image>
       <text class="feature-name">{{item.name}}</text>
     </view>

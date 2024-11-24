@@ -1,0 +1,38 @@
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+
+    <view class="image-row">
+        <image class="image" src="{{imageUrl}}"></image>
+        <image class="image" src="{{picUrl}}"></image>
+    </view>
+    
+    <view class="text-row">
+        <image class="text-pic" src="{{textUrl}}"></image>
+        <image class="play-button" src="{{playUrl}}"></image>
+    </view>
+
+    <view class="canvas-container">
+        <canvas 
+        id="myCanvas" 
+        type="2d" 
+        style="border: 1px solid; width: 400px; height: 400px;" 
+        bindtouchstart="handleTouchStart" 
+        bindtouchmove="handleTouchMove" 
+        bindtouchend="handleTouchEnd"
+        ></canvas>
+    </view>
+
+    <!-- 工具栏 -->
+    <view class="toolbar">
+        <button bindtap="toggleEraser">{{ isEraser ? '切换到画笔' : '切换到橡皮擦' }}</button>
+        <!--<button bindtap="clearCanvas">清除画布</button>-->
+        <image class="clear-button" bindtap="clearCanvas" src="{{clearUrl}}"></image>
+    </view>
+
+
+</view>
