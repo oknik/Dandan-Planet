@@ -3,7 +3,8 @@ const nameUrl = 'https://pic.imgdb.cn/item/673488b3d29ded1a8c89b493.png'
 const features = [
   {
     name: "语文",
-    imageUrl: "https://pic.imgdb.cn/item/67349ebcd29ded1a8c9b8610.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/67349ebcd29ded1a8c9b8610.jpg",
+    url: "/pages/Chinese/characters"
   },
   {
     name: "数学",
@@ -39,5 +40,16 @@ Page({
     this.setData({
       userInfo: userInfo
     });
+  },
+
+  // 点击事件处理函数
+  handleItemClick(e) {
+    const { url } = e.currentTarget.dataset; // 获取当前点击项的url
+    if (url) {
+      wx.navigateTo({
+        url: url // 跳转到指定页面
+      });
+    }
   }
 });
+

@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/dashboard/dashboard"
+    "pages/dashboard/dashboard",
+    "pages/Chinese/characters",
+    "pages/learnCharacter/learnCharacter"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "style": "v2",
   "renderer": "skyline",
   "rendererOptions": {
     "skyline": {
@@ -21,5 +22,6 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "requiredMiniprogramVersion": "2.29.2"
 }

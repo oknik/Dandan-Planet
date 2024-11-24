@@ -1,0 +1,6 @@
+<!--pages/learnCharacter/learnCharacter.wxml-->
+<view class="container">
+  <view id="hanzi-container"></view>
+  <van-button type="info" bindtap="playVoice">播放读音</van-button>
+  <van-button type="primary" bindtap="testWriting">测试写法</van-button>
+</view>

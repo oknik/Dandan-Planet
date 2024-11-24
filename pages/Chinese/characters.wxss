@@ -1,0 +1,48 @@
+/* pages/Chinese/characters.wxss */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;/* 从顶部开始排列 */
+  background-color: #c8e8e8;
+  padding-top: 50px;
+}
+
+.buttons{
+  position: relative;
+  margin-top: -30px;
+}
+
+.choose-char {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 30rpx; /* 与按钮区域之间的间距 */
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+  width: 20%;
+  background-color: #f7f8fa;
+  height: calc(100vh - 200rpx); /* 100rpx是顶部导航栏和按钮的总高度 */
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* 汉字展示区样式 */
+.character-display {
+  width: 80%;
+  background-color:#ffffff;
+  height: calc(100vh - 200rpx);
+  position: fixed;
+  right: 0;
+  overflow-y: auto;
+}
+
+.character {
+  width: 80px; /* 汉字容器宽度 */
+  height: 80px; /* 汉字容器高度 */
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
