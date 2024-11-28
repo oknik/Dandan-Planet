@@ -25,7 +25,7 @@ Page({
 
     onCaculate(){
         wx.navigateTo({
-            url: '/pages/dashboard/dashboard'
+            url: '/pages/math/caculate/caculate'
           });
     }
 })
