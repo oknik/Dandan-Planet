@@ -1,0 +1,114 @@
+/* pages/register/register.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中 */
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+}
+
+.navigation-bar {
+  width: 95%;
+  position: fixed;
+  top: 1.5%;
+}
+
+.name {
+  width: 90%;
+  height: 150%;
+  margin-top: -12%;
+  margin-left: 4%;
+}
+
+.content{
+  width: 130%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  font-size: 18px;
+  margin:auto;
+  margin-left: -8vh;
+  margin-right: 7.5vh;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #cccccc;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.item input{
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  margin-left: -10%;
+}
+.item .label {
+  width: 30%;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+  margin-left: 5%;
+}
+.holder{
+  font-size: 18px;
+  color: #999999;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.code{
+  border: 1px solid #ffd900;
+  height: 80%;
+  width: 20%;
+  background-color: #ffee00;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: #000000a8;
+  font-size: 18px;
+  margin-left: 15%;
+}
+.btn{
+  width: 90%;
+  color: #999999;
+  background-color: #007aff;  /* 蓝色背景 */
+  margin-top: 20px;
+}
+
+.picker-value {
+  font-size: 18px;
+  color: #999999;
+  margin-left: -30%;
+}
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 5%;
+}
+.picker {
+  width: 100%; /* 确保 picker 占据父容器的宽度 */
+}

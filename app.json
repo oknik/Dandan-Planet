@@ -7,7 +7,9 @@
     "pages/math/select/select",
     "pages/math/number/number",
     "pages/math/detail/detail",
-    "pages/math/compare/compare"
+    "pages/math/compare/compare",
+    "pages/register/register",
+    "pages/Chinese/select/select"
   ],
   "window": {
     "navigationBarTextStyle": "black",
