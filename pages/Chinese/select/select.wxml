@@ -1,2 +1,14 @@
 <!--pages/Chinese/select/select.wxml-->
-<text>pages/Chinese/select/select.wxml</text>
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+    
+    <image class="title-pic" src="{{titleUrl}}"></image>
+    <image class="pinyin-pic" src="{{pinyinUrl}}" bindtap="onPinyin"></image>
+    <image class="hanzi-pic" src="{{hanziUrl}}" bindtap="onHanzi"></image>
+    <image class="poetry-pic" src="{{poetryUrl}}" bindtap="onPoetry"></image>
+</view>

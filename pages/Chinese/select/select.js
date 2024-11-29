@@ -1,66 +1,28 @@
 // pages/Chinese/select/select.js
+const titleUrl ='https://pic.imgdb.cn/item/6747c6e1d0e0a243d4d7b727.png'
+const pinyinUrl='https://pic.imgdb.cn/item/6747d580d0e0a243d4d808c4.png'
+const hanziUrl='https://pic.imgdb.cn/item/6747d2bad0e0a243d4d7f5f6.png'
+const poetryUrl='https://pic.imgdb.cn/item/6747d770d0e0a243d4d8155b.png'
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    titleUrl,
+    pinyinUrl,
+    hanziUrl,
+    poetryUrl
+  },
+
+  onHanzi(){
+    wx.navigateTo({
+        url: '/pages/Chinese/hanzi-select/hanzi-select'
+      });
+  },
+
+  onPinyin(){
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  onPoetry(){
+    
   }
 })

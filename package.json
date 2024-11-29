@@ -5,7 +5,7 @@
     "cnchar-draw": "^3.2.6",
     "cnchar-voice": "^3.2.6",
     "hanzi-writer": "^3.7.2",
-    "hanzi-writer-miniprogram": "^1.1.0"
+    "hanzi-writer-miniprogram": "^1.2.0-beta.1"
   },
   "devDependencies": {
     "miniprogram-api-typings": "^4.0.2"

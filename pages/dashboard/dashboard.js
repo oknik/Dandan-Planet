@@ -2,7 +2,7 @@ const app = getApp();
 const nameUrl = 'https://pic.imgdb.cn/item/673488b3d29ded1a8c89b493.png'
 const features = [
   {
-    path: "Chinese/characters",
+    path: "Chinese/select/select",
     name: "语文",
     imageUrl: "https://pic.imgdb.cn/item/67349ebcd29ded1a8c9b8610.jpg",
   },

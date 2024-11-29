@@ -9,7 +9,9 @@
     "pages/math/detail/detail",
     "pages/math/compare/compare",
     "pages/register/register",
-    "pages/Chinese/select/select"
+    "pages/Chinese/select/select",
+    "pages/Chinese/hanzi-select/hanzi-select",
+    "pages/Chinese/hanzi-page/hanzi-page"
   ],
   "window": {
     "navigationBarTextStyle": "black",
