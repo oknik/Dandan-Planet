@@ -83,8 +83,8 @@
   }
   
   .choose-image {
-    width: 80px;
-    height: 80px;
+    width: 125px;
+    height: 125px;
     margin: 0 10px; 
   }
   

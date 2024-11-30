@@ -75,16 +75,16 @@ const imageData = [
 ];
 
 Page({
-  data: {
-    name: '',
-    imageUrl: '',
-    picUrl: '',
-    text: '',
-    textUrl: '',
-    writeUrl: '',
-    playUrl,
-    clearUrl,
-  },
+    data: {
+        name: '',
+        imageUrl: '',
+        picUrl: '',
+        text: '',
+        textUrl: '',
+        writeUrl: '',
+        playUrl,
+        clearUrl,
+    },
   canvas: null, // 保存 canvas 对象到类实例
   ctx: null,    // 保存绘图上下文到类实例
   isDrawing: false, // 绘图状态保存到类实例

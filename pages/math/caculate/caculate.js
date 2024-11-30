@@ -45,6 +45,53 @@ const imageData = [
       imageUrl: "https://pic.imgdb.cn/item/674810efd0e0a243d4d8df55.jpg"
     }
 ]
+const imageData2 = [
+  {
+    name: "0",
+    imageUrl: "https://pic.imgdb.cn/item/674b0259d0e0a243d4db7662.jpg"
+  },
+  {
+    name: "1",
+    imageUrl: "https://pic.imgdb.cn/item/674b0312d0e0a243d4db767b.jpg"
+  },
+  {
+    name: "2",
+    imageUrl: "https://pic.imgdb.cn/item/674b0393d0e0a243d4db768d.jpg"
+  },
+  {
+    name: "3",
+    imageUrl: "https://pic.imgdb.cn/item/674b039bd0e0a243d4db7691.jpg"
+  },
+  {
+    name: "4",
+    imageUrl: "https://pic.imgdb.cn/item/674b0404d0e0a243d4db769d.jpg"
+  },
+  {
+    name: "5",
+    imageUrl: "https://pic.imgdb.cn/item/674b040ed0e0a243d4db769e.jpg"
+  },
+  {
+    name: "6",
+    imageUrl: "https://pic.imgdb.cn/item/674b0417d0e0a243d4db769f.jpg"
+  },
+  {
+    name: "7",
+    imageUrl: "https://pic.imgdb.cn/item/674b0582d0e0a243d4db76c6.jpg"
+  },
+  {
+    name: "8",
+    imageUrl: "https://pic.imgdb.cn/item/674b058bd0e0a243d4db76c9.jpg"
+  },
+  {
+    name: "9",
+    imageUrl: "https://pic.imgdb.cn/item/674b0594d0e0a243d4db76ca.jpg"
+  },
+  {
+    name: "10",
+    imageUrl: "https://pic.imgdb.cn/item/674b059cd0e0a243d4db76cc.jpg"
+  }
+]
+
 const operators = [
     {
       name: "+",
@@ -68,6 +115,7 @@ Page({
       operator: "+",
       titleUrl,
       imageData,
+      imageData2,
       numImage1: "",
       numImage2: "",
       operatorImage: "",
@@ -108,7 +156,7 @@ Page({
 
     onChoose(event) {
         const index = event.currentTarget.dataset.index;
-        const selectedImage = this.data.imageData[index].imageUrl;
+        const selectedImage = this.data.imageData2[index].imageUrl;
         this.setData({
           circleUrl: selectedImage,
           result: index
