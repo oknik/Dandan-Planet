@@ -22,7 +22,7 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/6734a0ccd29ded1a8c9d2211.jpg"
   },
   {
-    path: "reward",
+    path: "draw/draw",
     name: "我是小画家",
     imageUrl: "https://pic.imgdb.cn/item/67485ce5d0e0a243d4da5f78.jpg"
   },
