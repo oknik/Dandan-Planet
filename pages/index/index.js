@@ -43,6 +43,8 @@ Page({
   },
 
   onRegister(){
-
+    wx.navigateTo({
+      url: '/pages/register/register'
+    });
   }
 })

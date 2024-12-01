@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.11.7",
+    "cnchar": "^3.2.6",
+    "cnchar-draw": "^3.2.6",
+    "cnchar-voice": "^3.2.6",
+    "hanzi-writer": "^3.7.2",
+    "hanzi-writer-miniprogram": "^1.2.0-beta.1",
+    "pinyin-pro": "^3.26.0",
+    "wl-pinyin": "^1.0.1"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^4.0.2"
+  }
+}

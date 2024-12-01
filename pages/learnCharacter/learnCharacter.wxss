@@ -1,0 +1,13 @@
+/* pages/learnCharacter/learnCharacter.wxss */
+
+.container {
+  padding: 20rpx;
+  text-align: center;
+}
+
+#hanzi-container {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}

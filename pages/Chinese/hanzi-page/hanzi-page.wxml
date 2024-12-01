@@ -1,0 +1,34 @@
+<!--pages/Chinese/hanzi-page/hanzi-page.wxml-->
+
+<view class="container">
+  <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+
+  <!-- 标题图片 -->
+  <image class="title-pic" src="{{titleUrl}}"></image>
+
+  <!-- 汉字 -->
+  <view class="hanzi-container">
+    <view class="char-row">
+      <!-- 使用 wx:for 循环遍历汉字数组 -->
+      <view class="char-item" 
+        wx:for="{{currentCharacters}}" 
+        wx:key="index" 
+        data-character="{{item}}"
+        bindtap="onCharacterClick">
+        <hanzi-writer-view class="hz-writer" id="hz-writer-{{index}}" width="100" height="100" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 分页控制 -->
+  <view class="pagination">
+    <image class="page-button" src="{{currentPage === 1 ? prevBtnDisabledImage : prevBtnImage}}" bindtap="prevPage" />
+    <text class="page-info">第 {{currentPage}} 页 / 共 {{totalPages}} 页</text>
+    <image class="page-button" src="{{currentPage === totalPages ? nextBtnDisabledImage : nextBtnImage}}" bindtap="nextPage" />
+  </view>
+</view>

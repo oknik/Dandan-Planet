@@ -1,0 +1,38 @@
+/* pages/Chinese/select/select.wxss */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  background-color: #c8e8e8;
+  padding-top: 50px;
+}
+
+.navigation-bar {
+  width: 95%;
+  position: fixed;
+  top: 3%;
+}
+
+.title-pic{
+  width: 90%;
+  height: 30%;
+  margin-top:3%;
+}
+
+.pinyin-pic{
+  width: 75%;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.hanzi-pic{
+  width: 85%;
+  height: 30%;
+  margin-top: 3%;
+}
+
+.poetry-pic{
+  width: 78%;
+  height: 30%;
+  margin-top: 3%;
+}
