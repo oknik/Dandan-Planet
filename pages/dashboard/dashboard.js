@@ -8,7 +8,7 @@ const features = [
   },
   {
     path: "math/select/select",
-    name: "数学",
+    name: "数学小达人",
     imageUrl: "https://pic.imgdb.cn/item/67349071d29ded1a8c8f8926.jpg"
   },
   {
@@ -22,9 +22,9 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/6734a0ccd29ded1a8c9d2211.jpg"
   },
   {
-    path: "reward",
-    name: "奖励",
-    imageUrl: "https://pic.imgdb.cn/item/6734a15ed29ded1a8c9d9b90.jpg"
+    path: "draw/draw",
+    name: "我是小画家",
+    imageUrl: "https://pic.imgdb.cn/item/67485ce5d0e0a243d4da5f78.jpg"
   },
   {
     path: "selfCenter",

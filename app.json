@@ -12,7 +12,9 @@
     "pages/Chinese/select/select",
     "pages/Chinese/hanzi-select/hanzi-select",
     "pages/Chinese/hanzi-page/hanzi-page",
-    "pages/Chinese/hanzi-learn/hanzi-learn"
+    "pages/Chinese/hanzi-learn/hanzi-learn",
+    "pages/math/caculate/caculate",
+    "pages/draw/draw"
   ],
   "window": {
     "navigationBarTextStyle": "black",

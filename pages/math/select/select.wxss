@@ -1,4 +1,4 @@
-.container {
+  .container {
     display: flex;
     height: 100vh;
     justify-content: flex-start;
@@ -12,7 +12,7 @@
 
   .title-pic {
     margin-top: -20px;
-    width: 470px;
+    width: 500px;
     height: 300px
   }
 
