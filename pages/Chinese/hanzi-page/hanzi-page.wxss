@@ -25,11 +25,10 @@
 /* 汉字容器 */
 .hanzi-container {
   display: flex;
-  flex-direction: column;  /* 汉字容器垂直方向滚动 */
+  flex-direction: column;  
   margin-top: 22%;  /* 给容器添加上边距 */
   padding: 0px;
   height: 80vh;  /* 设置容器的高度 */
-  overflow-y: scroll;  /* 启用垂直滚动 */
   margin-bottom: -14%;
 }
 

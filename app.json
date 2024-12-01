@@ -11,7 +11,8 @@
     "pages/register/register",
     "pages/Chinese/select/select",
     "pages/Chinese/hanzi-select/hanzi-select",
-    "pages/Chinese/hanzi-page/hanzi-page"
+    "pages/Chinese/hanzi-page/hanzi-page",
+    "pages/Chinese/hanzi-learn/hanzi-learn"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -113,4 +113,13 @@ Page({
       });
     }
   },
+
+  // 汉字点击事件，跳转到学习页面
+  onCharacterClick(e) {
+    const character = e.currentTarget.dataset.character;  // 获取点击的汉字
+    console.log(character);
+    wx.navigateTo({
+      url: `/pages/Chinese/hanzi-learn/hanzi-learn?character=${character}`,
+    });
+  }
 })

@@ -15,7 +15,11 @@
   <view class="hanzi-container">
     <view class="char-row">
       <!-- 使用 wx:for 循环遍历汉字数组 -->
-      <view class="char-item" wx:for="{{currentCharacters}}" wx:key="index">
+      <view class="char-item" 
+        wx:for="{{currentCharacters}}" 
+        wx:key="index" 
+        data-character="{{item}}"
+        bindtap="onCharacterClick">
         <hanzi-writer-view class="hz-writer" id="hz-writer-{{index}}" width="100" height="100" />
       </view>
     </view>
