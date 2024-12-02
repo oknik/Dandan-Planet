@@ -3,7 +3,7 @@ const nameUrl = 'https://pic.imgdb.cn/item/673488b3d29ded1a8c89b493.png'
 const features = [
   {
     path: "Chinese/select/select",
-    name: "语文",
+    name: "语文童话镇",
     imageUrl: "https://pic.imgdb.cn/item/67349ebcd29ded1a8c9b8610.jpg",
   },
   {
@@ -13,7 +13,7 @@ const features = [
   },
   {
     path: "English/select/select",
-    name: "英语",
+    name: "英语梦工厂",
     imageUrl: "https://pic.imgdb.cn/item/67349a3cd29ded1a8c9805dd.jpg"
   },
   {

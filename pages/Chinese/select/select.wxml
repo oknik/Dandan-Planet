@@ -3,7 +3,7 @@
     <navigation-bar
         class="navigation-bar"
         back="{{true}}"
-        background="#c8e8e8"
+        background="#ffffff00"
         color="#333"
     ></navigation-bar>
     
