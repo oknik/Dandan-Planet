@@ -49,17 +49,10 @@ Page({
   },
 
   playVoice(){
-    plugin.textToSpeech({
-      lang: "zh_CN",
-      tts: true,
-      content: character,
-      success: function(res) {
-          console.log("succ tts", res.filename)   
-      },
-      fail: function(res) {
-          console.log("fail tts", res)
-      }
-  })
+
+    
+
+    
   },
 
   writeQuiz(){
