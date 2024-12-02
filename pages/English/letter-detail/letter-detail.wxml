@@ -1,0 +1,14 @@
+<!--pages/English/letter-detail/letter-detail.wxml-->
+<view class="container">
+  <navigation-bar
+    class="navigation-bar"
+    back="{{true}}"
+    background="#ffffff00"
+    color="#333"
+  ></navigation-bar>
+
+  <view class="letter-detail">
+    <text class="letter-title">{{letter}}</text>
+    <image class="letter-image" src="{{imageUrl}}" />
+  </view>
+</view>

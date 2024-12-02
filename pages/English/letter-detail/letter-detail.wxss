@@ -1,0 +1,14 @@
+/* pages/English/letter-detail/letter-detail.wxss */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  background-color: #c8e8e8;
+  padding-top: 50px;
+}
+
+.navigation-bar {
+  width: 95%;
+  position: fixed;
+  top: 3%;
+}

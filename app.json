@@ -16,7 +16,8 @@
     "pages/math/caculate/caculate",
     "pages/draw/draw",
     "pages/English/select/select",
-    "pages/English/letter-select/letter-select"
+    "pages/English/letter-select/letter-select",
+    "pages/English/letter-detail/letter-detail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
