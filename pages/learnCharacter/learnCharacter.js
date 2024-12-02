@@ -1,42 +1,66 @@
 // pages/learnCharacter/learnCharacter.js
-import HanziWriter from "hanzi-writer";
-import cnchar from "cnchar";
-import "cnchar-voice";
-
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    character: ""
+
   },
 
+  /**
+   * 生命周期函数--监听页面加载
+   */
   onLoad(options) {
-    const char = options.character;
-    this.setData({ character: char });
 
-    // 初始化汉字动画
-    const writer = HanziWriter.create("hanzi-container", char, {
-      width: 300,
-      height: 300,
-      padding: 10,
-      showOutline: true,
-      showCharacter: true,
-      delayBetweenStrokes: 300,
-      strokeAnimationSpeed: 1
-    });
-
-    // 自动播放写法动画
-    writer.animateCharacter();
-    this.writer = writer;
   },
 
-  playVoice() {
-    const char = this.data.character;
-    cnchar.voice.play(char, {
-      speed: 1,
-      local: true
-    });
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
   },
 
-  testWriting() {
-    this.writer.quiz();
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
   }
-});
+})

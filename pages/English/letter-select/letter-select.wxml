@@ -1,0 +1,19 @@
+<!--pages/English/letter-select/letter-select.wxml-->
+<view class="container">
+  <navigation-bar
+    class="navigation-bar"
+    back="{{true}}"
+    background="#c8e8e8"
+    color="#333"
+  ></navigation-bar>
+
+  <view class="title">
+    <image class="title-pic" src="{{titleUrl}}" bindload="onImageLoad"></image>
+  </view>
+
+  <view class="letter-container">
+
+
+  </view>
+
+</view>

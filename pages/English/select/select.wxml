@@ -1,0 +1,13 @@
+<!--pages/English/select/select.wxml-->
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+    
+    <image class="title-pic" src="{{titleUrl}}"></image>
+    <image class="letter-pic" src="{{letterUrl}}" bindtap="onLetter"></image>
+    <image class="word-pic" src="{{wordUrl}}" bindtap="onWord"></image>
+</view>

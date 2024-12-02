@@ -12,7 +12,7 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/67349071d29ded1a8c8f8926.jpg"
   },
   {
-    path: "english",
+    path: "English/select/select",
     name: "英语",
     imageUrl: "https://pic.imgdb.cn/item/67349a3cd29ded1a8c9805dd.jpg"
   },
