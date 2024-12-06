@@ -10,14 +10,17 @@
   </view>
 
   <form catchsubmit="formSubmit" catchreset="formReset">
-    <view class="content">     
+    <view class="content">  
+      <view class="title">
+          <text>注册</text>
+      </view>   
       <!-- 用户名 -->
       <view class="item">
         <text class="label">用户名</text>
         <input 
           type="text" 
           name="userName" 
-          placeholder="请设置用户名" 
+          placeholder="请输入孩子姓名" 
           placeholder-class="holder" 
           value="{{userName}}"
           bindinput="onUserNameChange"
