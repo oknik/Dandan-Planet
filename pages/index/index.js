@@ -8,7 +8,7 @@ Page({
   data: {
     backgroundUrl: backgroundUrl,
     nameUrl: nameUrl,
-    activeTab: 'password',
+    activeTab: 'code',
     userPhone: '',
     userPassword: '',
     seeUrl: seeUrl,
@@ -31,7 +31,41 @@ Page({
   },
 
   sendCode() {
+    if (!this.data.userPhone) {
+      wx.showToast({
+          title: '请输入手机号',
+          icon: 'none',
+          duration: 2000
+      });
+      return;
+      }
+      // 模拟验证码发送
+      this.setData({
+      verificationCode: '123456' // 假设发送的验证码是 123456
+      });
+      wx.showToast({
+      title: '验证码已发送',
+      icon: 'success',
+      duration: 2000
+      });
+  },
 
+  onPhoneChange(e) {
+    this.setData({
+      userPhone: e.detail.value
+    });
+  },
+
+  onPasswordChange(e) {
+    this.setData({
+      userPassword: e.detail.value
+    });
+  },
+
+  onCodeChange(e) {
+    this.setData({
+      userCode: e.detail.value
+    });
   },
 
   onForgotPassword(){

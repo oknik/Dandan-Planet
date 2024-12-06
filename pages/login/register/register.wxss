@@ -24,10 +24,21 @@ page {
 }
 
 .name {
-  width: 90%;
-  height: 150%;
+  width: 600px;
+  height: 300px;
   margin-top: -12%;
-  margin-left: 4%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  line-height: 36px;
 }
 
 .content{
@@ -90,6 +101,7 @@ page {
   color: #000000;
   font-size: 18px;
   margin-left: 15%;
+  margin-right: 1%;
 }
 .btn{
   width: 90%;
