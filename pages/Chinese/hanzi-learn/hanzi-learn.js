@@ -1,8 +1,8 @@
 // pages/Chinese/hanzi-learn/hanzi-learn.js
 const createHanziWriterContext = require('hanzi-writer-miniprogram');
 const {pinyin} = require('pinyin-pro');
-
-
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
+const {audioPlayer}=require('../../../utils/playaudio.js');
 Page({
   data: {
     character: '',
@@ -13,6 +13,8 @@ Page({
     pinyinval:'',
     rewardImageVisible: false,  // 控制奖励图片是否显示
     rwdImg: 'https://pic.imgdb.cn/item/674c6bbfd0e0a243d4dba5f2.png',
+    audioFilePath: '', 
+    previousCharacter: '',
   },
 
   onLoad(options) {
@@ -49,17 +51,34 @@ Page({
   },
 
   playVoice(){
-    plugin.textToSpeech({
-      lang: "zh_CN",
-      tts: true,
-      content: character,
-      success: function(res) {
-          console.log("succ tts", res.filename)   
+  const character=this.data.character
+  if (character === this.data.previousCharacter && this.data.audioFilePath) {
+    // 如果相同且有音频文件路径，直接播放之前的音频
+    audioPlayer(`/audio/${this.data.audioFilePath}`)
+    return;  // 直接返回，不重新请求
+  }
+    wx.request({
+      url: `${apiBaseUrl}/tts/get-text`,
+      method: 'POST',
+      data: {
+          text: character,
+          voice_type: 2,
       },
-      fail: function(res) {
-          console.log("fail tts", res)
+      success: (res) => {
+          const response = res.data.response;
+          const filename = response.data;
+          console.log(res.data.response)
+          console.log(filename)
+          audioPlayer(`/audio/${filename}`)
+          this.setData({
+            previousCharacter: character,
+            audioFilePath: filename,
+          });
+      },
+      fail: (err) => {
+          console.error('请求失败', err);
       }
-  })
+    });
   },
 
   writeQuiz(){

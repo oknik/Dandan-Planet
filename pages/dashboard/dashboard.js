@@ -32,7 +32,7 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/67388efbd29ded1a8cb0baa0.png"
   }
 ];
-
+const {audioPlayer}=require('../../utils/playaudio.js');
 Page({
   data: {
     nameUrl,
@@ -45,6 +45,7 @@ Page({
     this.setData({
       userInfo: userInfo
     });
+    audioPlayer('/static/welcome.mp4')
   },
 
   goToPage: function (e) {
@@ -55,4 +56,3 @@ Page({
     });
   }
 });
-

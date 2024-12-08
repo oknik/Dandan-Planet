@@ -52,7 +52,9 @@ const imageData = [
     imageUrl: "https://pic.imgdb.cn/item/674810efd0e0a243d4d8df55.jpg"
   }
 ];
-
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
+const {audioPlayer}=require('../../../utils/playaudio.js');
+const audioBaseUrl='/static'
 Page({
   data: {
     titleUrl,
@@ -94,6 +96,7 @@ Page({
       circleUrl: this.data.bigUrl,
       choice: 'big',
     });
+    audioPlayer(`${audioBaseUrl}/big.mp3`)
   },
 
   onSame(){
@@ -101,6 +104,7 @@ Page({
       circleUrl: this.data.sameUrl,
       choice: 'same',
     });
+    audioPlayer(`${audioBaseUrl}/same.mp3`)
   },
 
   onSmall(){
@@ -108,6 +112,45 @@ Page({
       circleUrl: this.data.smallUrl,
       choice: 'small',
     });
+    audioPlayer(`${audioBaseUrl}/small.mp3`)
   },
+
+  onConfirm() {
+    const { num1, num2, choice } = this.data;
+
+    wx.request({
+        url: `${apiBaseUrl}/math/compare`,
+        method: 'POST',
+        data: {
+            a: num1,
+            b: num2,
+            operator: choice
+        },
+        success: (res) => {
+            const response = res.data.response;
+            const result = response.result;
+            const correctAnswer = response.correct_answer;
+            this.setData({
+                result,
+                correctAnswer
+            });
+            //返回了结果和正确答案
+            console.log(result,correctAnswer)
+            if(result)
+              audioPlayer(`${audioBaseUrl}/right.mp3`)
+            else{
+              if(correctAnswer==='big')
+                audioPlayer(`${audioBaseUrl}/false/big.mp3`)
+              else if(correctAnswer==='small')
+                audioPlayer(`${audioBaseUrl}/false/small.mp3`)
+              else
+                audioPlayer(`${audioBaseUrl}/false/same.mp3`)
+            }
+        },
+        fail: (err) => {
+            console.error('请求失败', err);
+        }
+    });
+}
 
 });
