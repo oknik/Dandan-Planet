@@ -17,12 +17,6 @@ def sign_in():
 
     try:
 
-        # if not User.query.first():
-        #     user1 = User(username='test_user1', stars=0)
-        #     user2 = User(username='test_user2', stars=0)
-        #     db.session.add_all([user1, user2])
-        #     db.session.commit()
-
         data = request.get_json()
         user_id = data.get('user_id')
         if not user_id:
