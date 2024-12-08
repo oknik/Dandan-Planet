@@ -4,7 +4,7 @@ const nameUrl = 'https://pic.imgdb.cn/item/6721e774d29ded1a8c1f12cf.png'
 const seeUrl = 'https://pic.imgdb.cn/item/67262438d29ded1a8cafcac2.png'
 const unseeUrl = 'https://pic.imgdb.cn/item/6726243cd29ded1a8cafcdb2.png'
 const apiBaseUrl=getApp().globalData.apiBaseUrl;
-const { sendVerificationCode } = require('../../utils/verification.js');
+const { sendVerificationCode } = require('../../../utils/verification.js');
 Page({
   data: {
     newUrl: newUrl,
