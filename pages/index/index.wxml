@@ -24,6 +24,7 @@
         class="phone-input" 
         type="number" 
         maxlength="11" 
+        bindinput="onPhoneInput"
         value="{{userPhone}}"
         bindinput="onPhoneChange"
       />
@@ -52,17 +53,19 @@
       <text class="code-label">验证码</text>
       <input 
         class="code-input"
+        bindinput="onCodeInput"
         value="{{userPassword}}"
         bindinput="onCodeChange"
       />
       <button class="code-button" bindtap="sendCode">获取</button>
     </view>
 
-    <view class="button-container">
-      <button class="login-button" bindtap="onLogin">登录</button>
-      <button class="register-button" bindtap="onRegister">注册</button>
-    </view>
   </view>
 
-</view>
+  <view class="button-container">
+    <button class="login-button" bindtap="onLogin">登录</button>
+    <button class="register-button" bindtap="onRegister">注册</button>
+  </view>
 
+
+</view>

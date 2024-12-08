@@ -13,7 +13,7 @@
     
     <view class="text-row">
         <image class="text-pic" src="{{textUrl}}"></image>
-        <image class="play-button" src="{{playUrl}}"></image>
+        <image class="play-button" src="{{playUrl}}" bindtap="playAudio"></image>
     </view>
 
     <view class="canvas-container">

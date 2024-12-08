@@ -57,7 +57,7 @@
             <view wx:for="{{imageData2}}" wx:key="index" class="choose-item">
                 <image src="{{item.imageUrl}}" class="choose-image" bindtap="onChoose" data-index="{{index}}"></image>
             </view>
-            <image src="{{confirmUrl}}" class="choose-image"></image>
+            <image src="{{confirmUrl}}" class="choose-image" bindtap="onConfirm"></image>
         </view>
     </view>
 
