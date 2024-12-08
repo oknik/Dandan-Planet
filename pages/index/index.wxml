@@ -26,7 +26,6 @@
         maxlength="11" 
         bindinput="onPhoneInput"
         value="{{userPhone}}"
-        bindinput="onPhoneChange"
       />
     </view>
 
@@ -36,7 +35,7 @@
         class="password-input" 
         password="{{passwordVisible}}"
         value="{{userPassword}}"
-        bindinput="onPasswordChange"
+        bindinput="onPasswordInput"
       />
       <image 
         class="eye-icon" 
@@ -55,17 +54,13 @@
         class="code-input"
         bindinput="onCodeInput"
         value="{{userPassword}}"
-        bindinput="onCodeChange"
       />
       <button class="code-button" bindtap="sendCode">获取</button>
     </view>
 
+    <view class="button-container">
+      <button class="login-button" bindtap="onLogin">登录</button>
+      <button class="register-button" bindtap="onRegister">注册</button>
+    </view>
   </view>
-
-  <view class="button-container">
-    <button class="login-button" bindtap="onLogin">登录</button>
-    <button class="register-button" bindtap="onRegister">注册</button>
-  </view>
-
-
 </view>

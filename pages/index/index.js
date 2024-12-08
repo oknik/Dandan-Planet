@@ -1,10 +1,11 @@
 // index.js
-const backgroundUrl = 'https://pic.imgdb.cn/item/6725bebdd29ded1a8c600e6d.jpg'
+const backgroundUrl = 'https://pic.imgdb.cn/item/6741f55bd29ded1a8c345248.jpg'
 const nameUrl = 'https://pic.imgdb.cn/item/6721e774d29ded1a8c1f12cf.png'
 const seeUrl = 'https://pic.imgdb.cn/item/67262438d29ded1a8cafcac2.png'
 const unseeUrl = 'https://pic.imgdb.cn/item/6726243cd29ded1a8cafcdb2.png'
 const apiBaseUrl=getApp().globalData.apiBaseUrl;
 const { sendVerificationCode } = require('../../utils/verification.js');
+
 Page({
   data: {
     backgroundUrl: backgroundUrl,
@@ -17,21 +18,25 @@ Page({
     passwordVisible: true,
     userCode: '',
   },
+
   onPhoneInput(event) {
     this.setData({
       userPhone: event.detail.value
     });
   },
+
   onCodeInput(event){
     this.setData({
       userCode: event.detail.value
     });
   },
+
   onPasswordInput(event) {
     this.setData({
       userPassword: event.detail.value
     });
   },
+
   switchTab(event) {
     const { name } = event.currentTarget.dataset;
     this.setData({
@@ -55,6 +60,13 @@ Page({
     });
   },
 
+  onForgotPassword(){
+    wx.navigateTo({
+        url: '/pages/login/retrieve/retrieve'
+      });
+  },
+  
+  /*
   onLogin(){
     console.log(this.data.activeTab)
     console.log(apiBaseUrl)
@@ -78,6 +90,14 @@ Page({
       this.loginWithCode();
     }
   },
+  */
+
+  onLogin(){
+    wx.navigateTo({
+        url: '/pages/dashboard/dashboard'
+      });
+  },
+
   loginWithPassword() {
     wx.request({
       url: `${apiBaseUrl}/auth/login`,
