@@ -1,0 +1,45 @@
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    background-color: #c8e8e8;
+    padding-top: 50px;
+  }
+
+  .navigation-bar {
+    width: 95%;
+  }
+
+  .title-pic {
+    margin-top: -15px;
+    width: 500px;
+    height: 130px
+  }
+
+  .chinese-pic, .english-pic {
+      width: 600px;
+      height: 100px;
+      margin-top:30px;
+      margin-bottom: 20px;
+  }
+
+  .chinese-book, .english-book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .book-item {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+  
+  .book-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

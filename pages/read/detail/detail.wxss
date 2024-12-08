@@ -1,0 +1,92 @@
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    background-color: #c8e8e8;
+    padding-top: 50px;
+  }
+
+  .navigation-bar {
+    width: 95%;
+  }
+
+  .title-pic1 {
+    width: 400px;
+    height: 130px;
+  }
+
+  .title-pic3 {
+    width: 500px;
+    height: 130px;
+  }
+
+  .title-pic4 {
+    height: 130px;
+  }
+  
+  .content-container1 {
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 700px;
+    overflow-x: auto;
+    gap: 20px;
+    border-radius: 10px;
+  }
+  
+  .content-item1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .content-img1 {
+    width: 80%;
+    height: auto;
+    min-height: 250px;
+    border-radius: 10px;
+  }
+
+  .content-container2 {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    margin-left: 150px;
+  }
+  
+  .content-item2 {
+    display: inline-block;
+    justify-content: center;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: auto;
+    text-align: center;
+  }
+  
+  .content-img2 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .content-container1::-webkit-scrollbar, .content-container2::-webkit-scrollbar {
+    height: 6px;
+    background-color: transparent;
+  }
+  
+  .content-container1::-webkit-scrollbar-thumb, .content-container2::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .content-container1::-webkit-scrollbar-thumb:hover, .content-container2::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

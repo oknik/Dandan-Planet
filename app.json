@@ -10,11 +10,13 @@
     "pages/math/number/number",
     "pages/math/detail/detail",
     "pages/math/compare/compare",
+    "pages/math/caculate/caculate",
     "pages/Chinese/select/select",
     "pages/Chinese/hanzi-select/hanzi-select",
     "pages/Chinese/hanzi-page/hanzi-page",
     "pages/Chinese/hanzi-learn/hanzi-learn",
-    "pages/math/caculate/caculate",
+    "pages/read/select/select",
+    "pages/read/detail/detail",
     "pages/draw/draw"
   ],
   "window": {
