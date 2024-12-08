@@ -12,8 +12,13 @@
     </view>
     
     <view class="text-row">
+<<<<<<< Updated upstream:pages/math/zero/zero.wxml
         <text class="large-text">0像鸡蛋圆又圆</text>
         <image class="play-button" src="{{playUrl}}"></image>
+=======
+        <image class="text-pic" src="{{textUrl}}"></image>
+        <image class="play-button" src="{{playUrl}}" bindtap="playAudio"></image>
+>>>>>>> Stashed changes:pages/math/detail/detail.wxml
     </view>
 
     <view class="canvas-container">

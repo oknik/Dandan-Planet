@@ -1,0 +1,65 @@
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+
+    <view class="title">
+        <image class="title-img" src="{{titleUrl}}"></image>
+    </view>
+
+    <view class="question-container">
+        <image src="{{numImage1}}" class="num-image"></image>
+        <image src="{{operatorImage}}" class="operator-image"></image>
+        <image src="{{numImage2}}" class="num-image"></image>
+        <image src="{{equalUrl}}" class="equal-image"></image>
+        <image src="{{circleUrl}}" class="circle-image"></image>
+    </view>
+
+    <view class="pic-content">
+        <view class="watermelons" wx:if="{{num1 > 0}}" wx:key="index">
+            <view class="row">
+                <image wx:for="{{num1 >= 4 ? 4 : num1}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+            
+            <view wx:if="{{num1 > 4}}" class="row">
+                <image wx:for="{{num1 > 8 ? 4 : num1 - 4}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+            
+            <view wx:if="{{num1 > 8}}" class="row">
+                <image wx:for="{{num1 - 8}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+        </view>
+
+        <view class="question-container">
+            <image src="{{operatorImage}}" class="question-image"/>
+        </view>
+
+        <view class="watermelons" wx:if="{{num2 > 0}}" wx:key="index">
+            <view class="row">
+                <image wx:for="{{num2 >= 4 ? 4 : num2}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+            
+            <view wx:if="{{num2 > 4}}" class="row">
+                <image wx:for="{{num2 > 8 ? 4 : num2 - 4}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+            
+            <view wx:if="{{num2 > 8}}" class="row">
+                <image wx:for="{{num2 - 8}}" src="{{watermelonUrl}}" class="pic-image"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="choose-container">
+        <view class="choose-row">
+            <view wx:for="{{imageData2}}" wx:key="index" class="choose-item">
+                <image src="{{item.imageUrl}}" class="choose-image" bindtap="onChoose" data-index="{{index}}"></image>
+            </view>
+            <image src="{{confirmUrl}}" class="choose-image" bindtap="onConfirm"></image>
+        </view>
+    </view>
+
+    
+</view>

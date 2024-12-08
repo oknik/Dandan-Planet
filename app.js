@@ -2,7 +2,7 @@
 const avatarUrlDefault = 'https://pic.imgdb.cn/item/6728b79dd29ded1a8cd25236.jpg';
 
 class User {
-    constructor(name, level, stars, avatarUrl) {
+    constructor(name, level, stars, avatarUrl = avatarUrlDefault) {
       this.userName = name;
       this.userLevel = level;
       this.userStars = stars;
@@ -32,6 +32,12 @@ class User {
 
 App({
     globalData: {
-      userInfo: new User("kk", 3, 257, avatarUrlDefault)
-    }
+      // userInfo: new User("kk", 3, 257, avatarUrlDefault),
+      userInfo:null,
+      User: User, 
+      apiBaseUrl:'https://www.ddxq.asia',
+    },
+    setUserInfo(userInfo) {
+      this.globalData.userInfo = userInfo;
+    },
 });
