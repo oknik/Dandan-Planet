@@ -20,14 +20,25 @@ page {
 .navigation-bar {
   width: 95%;
   position: fixed;
-  top: 1.5%;
+  top: 5%;
 }
 
 .name {
-  width: 90%;
-  height: 150%;
+  width: 600px;
+  height: 300px;
   margin-top: -12%;
-  margin-left: 4%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  line-height: 36px;
 }
 
 .content{
@@ -80,16 +91,17 @@ page {
 }
 
 .code{
-  border: 1px solid #ffd900;
+  border: 1px solid #fdcd00;
   height: 80%;
   width: 20%;
-  background-color: #ffee00;
+  background-color: #fdcd00;
   border-radius: 5px;
   text-align: center;
   line-height: 40px;
-  color: #000000a8;
+  color: #000000;
   font-size: 18px;
   margin-left: 15%;
+  margin-right: 1%;
 }
 .btn{
   width: 90%;

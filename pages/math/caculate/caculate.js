@@ -1,4 +1,6 @@
 const titleUrl = 'https://pic.imgdb.cn/item/67485097d0e0a243d4da3849.jpg'
+const audioBaseUrl='/static/number'
+const {audioPlayer}=require('../../../utils/playaudio.js');
 const imageData = [
     {
       name: "0",
@@ -48,47 +50,58 @@ const imageData = [
 const imageData2 = [
   {
     name: "0",
-    imageUrl: "https://pic.imgdb.cn/item/674b0259d0e0a243d4db7662.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0259d0e0a243d4db7662.jpg",
+    audioUrl:`${audioBaseUrl}/0.mp3`
   },
   {
     name: "1",
-    imageUrl: "https://pic.imgdb.cn/item/674b0312d0e0a243d4db767b.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0312d0e0a243d4db767b.jpg",
+    audioUrl:`${audioBaseUrl}/1.mp3`
   },
   {
     name: "2",
-    imageUrl: "https://pic.imgdb.cn/item/674b0393d0e0a243d4db768d.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0393d0e0a243d4db768d.jpg",
+    audioUrl:`${audioBaseUrl}/2.mp3`
   },
   {
     name: "3",
-    imageUrl: "https://pic.imgdb.cn/item/674b039bd0e0a243d4db7691.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b039bd0e0a243d4db7691.jpg",
+    audioUrl:`${audioBaseUrl}/3.mp3`
   },
   {
     name: "4",
-    imageUrl: "https://pic.imgdb.cn/item/674b0404d0e0a243d4db769d.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0404d0e0a243d4db769d.jpg",
+    audioUrl:`${audioBaseUrl}/4.mp3`
   },
   {
     name: "5",
-    imageUrl: "https://pic.imgdb.cn/item/674b040ed0e0a243d4db769e.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b040ed0e0a243d4db769e.jpg",
+    audioUrl:`${audioBaseUrl}/5.mp3`
   },
   {
     name: "6",
-    imageUrl: "https://pic.imgdb.cn/item/674b0417d0e0a243d4db769f.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0417d0e0a243d4db769f.jpg",
+    audioUrl:`${audioBaseUrl}/6.mp3`
   },
   {
     name: "7",
-    imageUrl: "https://pic.imgdb.cn/item/674b0582d0e0a243d4db76c6.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0582d0e0a243d4db76c6.jpg",
+    audioUrl:`${audioBaseUrl}/7.mp3`
   },
   {
     name: "8",
-    imageUrl: "https://pic.imgdb.cn/item/674b058bd0e0a243d4db76c9.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b058bd0e0a243d4db76c9.jpg",
+    audioUrl:`${audioBaseUrl}/8.mp3`
   },
   {
     name: "9",
-    imageUrl: "https://pic.imgdb.cn/item/674b0594d0e0a243d4db76ca.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b0594d0e0a243d4db76ca.jpg",
+    audioUrl:`${audioBaseUrl}/9.mp3`
   },
   {
     name: "10",
-    imageUrl: "https://pic.imgdb.cn/item/674b059cd0e0a243d4db76cc.jpg"
+    imageUrl: "https://pic.imgdb.cn/item/674b059cd0e0a243d4db76cc.jpg",
+    audioUrl:`${audioBaseUrl}/10.mp3`
   }
 ]
 
@@ -106,7 +119,7 @@ const equalUrl = 'https://pic.imgdb.cn/item/674825c9d0e0a243d4d94a66.jpg'
 const circleUrl = 'https://pic.imgdb.cn/item/674829dfd0e0a243d4d95d20.png'
 const watermelonUrl = 'https://pic.imgdb.cn/item/67480077d0e0a243d4d885d8.png'
 const confirmUrl = 'https://pic.imgdb.cn/item/6748023bd0e0a243d4d88f35.jpg'
-
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
 Page({
     data: {
       num1: 0,
@@ -161,5 +174,57 @@ Page({
           circleUrl: selectedImage,
           result: index
         });
-      }
+        audioPlayer(this.data.imageData2[index].audioUrl)
+      },
+
+      onConfirm() {
+        const { num1, num2, result,operator } = this.data;
+    
+        wx.request({
+            url: `${apiBaseUrl}/math/calculate`,
+            method: 'POST',
+            data: {
+                a: num1,
+                b: num2,
+                c: result,
+                operator: operator,
+            },
+            success: (res) => {
+                const response = res.data.response;
+                const result = response.result;
+                const correctAnswer = response.correct_answer;
+                this.setData({
+                    result,
+                    correctAnswer
+                });
+                //返回了结果和正确答案
+                console.log(result,correctAnswer)
+                if(result)
+                  audioPlayer(`/static/right.mp3`)
+                else{
+                  wx.request({
+                    url: `${apiBaseUrl}/tts/get-text`,
+                    method: 'POST',
+                    data: {
+                        text: `哎呀答错啦，正确答案是${correctAnswer}`,
+                        voice_type: 2,
+                    },
+                    success: (res) => {
+                        const response = res.data.response;
+                        const filename = response.data;
+                        console.log(res.data.response)
+                        console.log(filename)
+                        audioPlayer(`/audio/${filename}`)
+                    },
+                    fail: (err) => {
+                        console.error('请求失败', err);
+                    }
+                });
+              }    
+            },
+            fail: (err) => {
+                console.error('请求失败', err);
+            }
+        });
+    }
   });

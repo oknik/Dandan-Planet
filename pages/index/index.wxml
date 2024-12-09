@@ -3,18 +3,18 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 -->
 
-<view class="container" style="background-image: url('{{newUrl}}')">
+<view class="container" style="background-image: url('{{backgroundUrl}}')">
   <view class="name">
     <image class="name" src='{{nameUrl}}'></image>
   </view>
 
   <view class="input-container">
     <view class="tabs">
-      <view class="tab" bindtap="switchTab" data-name="password" style="{{activeTab === 'password' ? 'background-color: #fdcd00; color: black;' : ''}}">
-        密码登录
-      </view>
       <view class="tab" bindtap="switchTab" data-name="code" style="{{activeTab === 'code' ? 'background-color: #fdcd00; color: black;' : ''}}">
         验证码登录
+      </view>
+      <view class="tab" bindtap="switchTab" data-name="password" style="{{activeTab === 'password' ? 'background-color: #fdcd00; color: black;' : ''}}">
+        密码登录
       </view>
     </view>
 
@@ -24,6 +24,7 @@
         class="phone-input" 
         type="number" 
         maxlength="11" 
+        bindinput="onPhoneInput"
         value="{{userPhone}}"
       />
     </view>
@@ -32,9 +33,9 @@
       <text class="password-label">密码</text>
       <input 
         class="password-input" 
-        bindinput="onPasswordInput"
         password="{{passwordVisible}}"
         value="{{userPassword}}"
+        bindinput="onPasswordInput"
       />
       <image 
         class="eye-icon" 
@@ -42,11 +43,16 @@
         bindtap="togglePasswordVisibility"
       />
     </view>
+    
+    <view wx:if="{{activeTab === 'password'}}" class="forgot-password-container">
+        <text class="forgot-password" bindtap="onForgotPassword">忘记密码？</text>
+    </view>
 
     <view wx:if="{{activeTab === 'code'}}" class="code">
       <text class="code-label">验证码</text>
       <input 
         class="code-input"
+        bindinput="onCodeInput"
         value="{{userPassword}}"
       />
       <button class="code-button" bindtap="sendCode">获取</button>
@@ -57,6 +63,4 @@
       <button class="register-button" bindtap="onRegister">注册</button>
     </view>
   </view>
-
 </view>
-

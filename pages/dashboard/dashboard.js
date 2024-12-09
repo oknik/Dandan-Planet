@@ -17,8 +17,8 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/67349a3cd29ded1a8c9805dd.jpg"
   },
   {
-    path: "pictureBook",
-    name: "绘本",
+    path: "read/select/select",
+    name: "悦读绘本园",
     imageUrl: "https://pic.imgdb.cn/item/6734a0ccd29ded1a8c9d2211.jpg"
   },
   {
@@ -32,7 +32,7 @@ const features = [
     imageUrl: "https://pic.imgdb.cn/item/67388efbd29ded1a8cb0baa0.png"
   }
 ];
-
+const {audioPlayer}=require('../../utils/playaudio.js');
 Page({
   data: {
     nameUrl,
@@ -45,6 +45,7 @@ Page({
     this.setData({
       userInfo: userInfo
     });
+    audioPlayer('/static/welcome.mp4')
   },
 
   goToPage: function (e) {
@@ -55,4 +56,3 @@ Page({
     });
   }
 });
-

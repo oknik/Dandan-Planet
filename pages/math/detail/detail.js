@@ -1,79 +1,89 @@
 const playUrl = 'https://pic.imgdb.cn/item/67389e2fd29ded1a8cbe6fc9.png';
 const clearUrl = 'https://pic.imgdb.cn/item/673cc329d29ded1a8c322f63.png';
-
+const audioBaseUrl='/static/detail'
 const imageData = [
   {
     name: "zero",
     imageUrl: 'https://pic.imgdb.cn/item/6742037ad29ded1a8c405f1c.png',
     picUrl: 'https://pic.imgdb.cn/item/673cb78fd29ded1a8c2293b3.jpg',
     textUrl: 'https://pic.imgdb.cn/item/67420214d29ded1a8c3f3d3c.png',
-    writeUrl: 'https://pic.imgdb.cn/item/6738a670d29ded1a8cc6fb11.png'
+    writeUrl: 'https://pic.imgdb.cn/item/6738a670d29ded1a8cc6fb11.png',
+    audioUrl:`${audioBaseUrl}/0.mp3`
   },
   {
     name: "one",
     imageUrl: "https://pic.imgdb.cn/item/674203b2d29ded1a8c408cb6.png",
     picUrl: 'https://pic.imgdb.cn/item/673c17b5d29ded1a8c4fbd0c.png',
     textUrl: 'https://pic.imgdb.cn/item/67420259d29ded1a8c3f718a.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cbc74d29ded1a8c29cca5.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cbc74d29ded1a8c29cca5.png',
+    audioUrl:`${audioBaseUrl}/1.mp3`
   },
   {
     name: "two",
     imageUrl: "https://pic.imgdb.cn/item/67420400d29ded1a8c40cf51.png",
     picUrl: 'https://pic.imgdb.cn/item/673c1864d29ded1a8c504410.png',
     textUrl: 'https://pic.imgdb.cn/item/67420467d29ded1a8c412701.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cbcb0d29ded1a8c2a2698.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cbcb0d29ded1a8c2a2698.png',
+    audioUrl:`${audioBaseUrl}/2.mp3`
   },
   {
     name: "three",
     imageUrl: "https://pic.imgdb.cn/item/674205a9d29ded1a8c42810d.png",
     picUrl: 'https://pic.imgdb.cn/item/673c193ed29ded1a8c50d8cf.png',
     textUrl: 'https://pic.imgdb.cn/item/67420488d29ded1a8c414238.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cbcfdd29ded1a8c2a983b.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cbcfdd29ded1a8c2a983b.png',
+    audioUrl:`${audioBaseUrl}/3.mp3`
   },
   {
     name: "four",
     imageUrl: "https://pic.imgdb.cn/item/6736f106d29ded1a8c5f09a8.png",
     picUrl: 'https://pic.imgdb.cn/item/673c19f8d29ded1a8c516ad0.png',
     textUrl: 'https://pic.imgdb.cn/item/674205f4d29ded1a8c42b34f.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc436d29ded1a8c332c74.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc436d29ded1a8c332c74.png',
+    audioUrl:`${audioBaseUrl}/4.mp3`
   },
   {
     name: "five",
     imageUrl: "https://pic.imgdb.cn/item/6736f19cd29ded1a8c5fb35b.png",
     picUrl: 'https://pic.imgdb.cn/item/673cb1c9d29ded1a8c19c795.png',
     textUrl: 'https://pic.imgdb.cn/item/6742062cd29ded1a8c42de9b.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc46ad29ded1a8c33895a.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc46ad29ded1a8c33895a.png',
+    audioUrl:`${audioBaseUrl}/5.mp3`
   },
   {
     name: "six",
     imageUrl: "https://pic.imgdb.cn/item/67420664d29ded1a8c430997.png",
     picUrl: 'https://pic.imgdb.cn/item/673cb751d29ded1a8c225223.png',
     textUrl: 'https://pic.imgdb.cn/item/674206a7d29ded1a8c433a12.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc482d29ded1a8c33b408.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc482d29ded1a8c33b408.png',
+    audioUrl:`${audioBaseUrl}/6.mp3`
   },
   {
     name: "seven",
     imageUrl: "https://pic.imgdb.cn/item/67420707d29ded1a8c437a23.png",
     picUrl: 'https://pic.imgdb.cn/item/673cb219d29ded1a8c1a4aea.png',
     textUrl: 'https://pic.imgdb.cn/item/67420739d29ded1a8c439f3b.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc491d29ded1a8c33c351.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc491d29ded1a8c33c351.png',
+    audioUrl:`${audioBaseUrl}/7.mp3`
   },
   {
     name: "eight",
     imageUrl: "https://pic.imgdb.cn/item/67420781d29ded1a8c43d57c.png",
     picUrl: 'https://pic.imgdb.cn/item/673cb24dd29ded1a8c1a9824.png',
     textUrl: 'https://pic.imgdb.cn/item/674207aed29ded1a8c43fbd0.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc49fd29ded1a8c33cf29.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc49fd29ded1a8c33cf29.png',
+    audioUrl:`${audioBaseUrl}/8.mp3`
   },
   {
     name: "nine",
     imageUrl: "https://pic.imgdb.cn/item/674207ebd29ded1a8c44371e.png",
     picUrl: 'https://pic.imgdb.cn/item/673cb271d29ded1a8c1ad5aa.png',
     textUrl: 'https://pic.imgdb.cn/item/6742085fd29ded1a8c449113.png',
-    writeUrl: 'https://pic.imgdb.cn/item/673cc4b3d29ded1a8c33dfc0.png'
+    writeUrl: 'https://pic.imgdb.cn/item/673cc4b3d29ded1a8c33dfc0.png',
+    audioUrl:`${audioBaseUrl}/9.mp3`
   }
 ];
-
+const {audioPlayer}=require('../../../utils/playaudio.js');
 Page({
     data: {
         name: '',
@@ -102,7 +112,8 @@ Page({
         imageUrl: matchedItem.imageUrl,
         picUrl: matchedItem.picUrl,
         textUrl: matchedItem.textUrl,
-        writeUrl: matchedItem.writeUrl
+        writeUrl: matchedItem.writeUrl,
+        audioUrl:matchedItem.audioUrl
       });
     }
 
@@ -226,5 +237,10 @@ Page({
     if (writeUrl) {
       this.loadBackgroundImage(width, height, writeUrl);
     }
+  },
+
+  // 播放音频
+  playAudio() {
+    audioPlayer(this.data.audioUrl)
   }
 });

@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/login/register/register",
+    "pages/login/retrieve/retrieve",
     "pages/dashboard/dashboard",
     "pages/math/select/select",
     "pages/math/number/number",
     "pages/math/detail/detail",
     "pages/math/compare/compare",
-    "pages/register/register",
+    "pages/math/caculate/caculate",
     "pages/Chinese/select/select",
     "pages/Chinese/hanzi-select/hanzi-select",
     "pages/Chinese/hanzi-page/hanzi-page",
@@ -15,7 +17,10 @@
     "pages/draw/draw",
     "pages/English/select/select",
     "pages/English/letter-select/letter-select",
-    "pages/English/letter-detail/letter-detail"
+    "pages/English/letter-detail/letter-detail",
+    "pages/read/select/select",
+    "pages/read/detail/detail",
+    "pages/draw/draw"
   ],
   "window": {
     "navigationBarTextStyle": "black",
