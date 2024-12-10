@@ -13,11 +13,9 @@
     "pages/Chinese/hanzi-select/hanzi-select",
     "pages/Chinese/hanzi-page/hanzi-page",
     "pages/Chinese/hanzi-learn/hanzi-learn",
-    "pages/math/caculate/caculate",
-    "pages/draw/draw",
-    "pages/English/select/select",
     "pages/English/letter-select/letter-select",
     "pages/English/letter-detail/letter-detail",
+    "pages/English/select/select",
     "pages/read/select/select",
     "pages/read/detail/detail",
     "pages/draw/draw"

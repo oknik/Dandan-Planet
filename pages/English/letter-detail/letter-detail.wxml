@@ -7,8 +7,30 @@
     color="#333"
   ></navigation-bar>
 
-  <view class="letter-detail">
-    <text class="letter-title">{{letter}}</text>
-    <image class="letter-image" src="{{imageUrl}}" />
+  <view class="letter-container">
+    <image class="letter-img" src="{{letterUrl}}"></image>
+    <image class="audio-button" src="{{audioBtUrl}}" data-type="letter" bindtap="playAudio"></image>
   </view>
+
+  <view class="word-container">
+    <image class="word-img" src="{{wordUrl}}"  data-type="word" bindtap="playAudio"></image>
+  </view>
+
+  <view class="canvas-container">
+    <canvas 
+      id="myCanvas" 
+      type="2d" 
+      style="border: 0px solid; width: 600px; height: 219px;" 
+      bindtouchstart="handleTouchStart" 
+      bindtouchmove="handleTouchMove" 
+      bindtouchend="handleTouchEnd"
+    ></canvas>
+  </view>
+
+  <!-- 工具栏 -->
+  <view class="toolbar">
+    <button bindtap="toggleEraser">{{ isErasing ? '切换到画笔' : '切换到橡皮擦' }}</button>
+    <image class="clear-button" bindtap="clearCanvas" src="{{eraserUrl}}"></image>
+  </view>
+
 </view>
