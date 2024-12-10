@@ -1,0 +1,29 @@
+<view class="container">
+    <navigation-bar
+        class="navigation-bar"
+        back="{{true}}"
+        background="#c8e8e8"
+        color="#333"
+    ></navigation-bar>
+
+    <view class="title">
+        <image class="title-img" src="{{titleUrl}}"></image>
+    </view>
+
+    <image class="yunmu-title" src="{{yunmuUrl}}"></image>
+    <scroll-view class="content-container" scroll-x="true">
+        <view wx:for="{{yunmuData}}" wx:key="id" class="content-item">
+        <image class="content-img" src="{{item.url}}" bindtap="playAudio" data-audio="{{item.audioUrl}}"/>
+        </view>
+    </scroll-view>
+
+
+    <image class="shengmu-title" src="{{shengmuUrl}}"></image>
+    <scroll-view class="content-container" scroll-x="true">
+        <view wx:for="{{shengmuData}}" wx:key="id" class="content-item">
+        <image class="content-img" src="{{item.url}}" bindtap="playAudio" data-audio="{{item.audioUrl}}"/>
+        </view>
+    </scroll-view>
+
+
+</view>
