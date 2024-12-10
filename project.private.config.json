@@ -6,5 +6,18 @@
     "skylineRenderEnable": false,
     "urlCheck": false
   },
-  "libVersion": "3.6.6"
+  "libVersion": "3.6.6",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "test",
+          "pathName": "pages/Chinese/pinyin/pinyin",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
