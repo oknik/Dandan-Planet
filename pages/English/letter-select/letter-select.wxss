@@ -1,0 +1,70 @@
+/* pages/English/letter-select/letter-select.wxss */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  background-color: #c8e8e8;
+  padding-top: 50px;
+}
+
+.navigation-bar {
+  width: 95%;
+  position: fixed;
+  top: 3%;
+}
+
+.title-pic{
+  width:400px;
+  height:135px;
+  margin-top: 3.5%;
+}
+
+.letter-container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap; /* 允许换行 */
+  justify-content: space-evenly; /* 均匀分布字母 */
+  margin-top: 15px;
+  gap:10px;
+}
+
+.letter-item {
+  width: 200px;  /* 设置容器宽度 */
+  height: 140px; /* 设置容器高度 */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* margin-left: 8px;
+  margin-right: 8px; */
+  text-align: center;
+}
+
+.letter-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 确保图片在容器内缩放但保持比例 */
+  border-radius: 10%;
+}
+
+
+/* 分页按钮样式 */
+.pagination {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #c8e8e8;
+  margin-top: 18px;
+}
+
+.page-button {
+  width: 80px; /* 设置图片的宽度 */
+  height: 80px; /* 设置图片的高度 */
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.page-info {
+  align-self: center;
+  font-size: 20px;
+  color: rgb(70, 0, 0);
+}

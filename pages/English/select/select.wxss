@@ -1,4 +1,4 @@
-/* pages/Chinese/select/select.wxss */
+/* pages/English/select/select.wxss */
 .container {
   display: flex;
   height: 100vh;
@@ -14,25 +14,19 @@
 }
 
 .title-pic{
-  width: 65%;
-  height: 65%;
-  margin-top:5%;
+  width: 75%;
+  height: 20%;
+  margin-top:8%;
 }
 
-.pinyin-pic{
+.letter-pic{
   width: 80%;
-  height: 100%;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.word-pic{
+  width: 80%;
+  height: 25%;
   margin-top: 8%;
-}
-
-.hanzi-pic{
-  width: 80%;
-  height: 100%;
-  margin-top: 3%;
-}
-
-.poetry-pic{
-  width: 80%;
-  height: 100%;
-  margin-top: 3%;
 }
