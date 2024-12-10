@@ -12,6 +12,7 @@
     "pages/math/compare/compare",
     "pages/math/caculate/caculate",
     "pages/Chinese/select/select",
+    "pages/Chinese/pinyin/pinyin",
     "pages/Chinese/hanzi-select/hanzi-select",
     "pages/Chinese/hanzi-page/hanzi-page",
     "pages/Chinese/hanzi-learn/hanzi-learn",

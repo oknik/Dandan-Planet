@@ -19,7 +19,9 @@ Page({
   },
 
   onPinyin(){
-
+    wx.navigateTo({
+      url: '/pages/Chinese/pinyin/pinyin'
+    });
   },
 
   onPoetry(){
