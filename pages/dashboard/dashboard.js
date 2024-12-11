@@ -1,5 +1,7 @@
 const app = getApp();
 const nameUrl = 'https://pic.imgdb.cn/item/673488b3d29ded1a8c89b493.png'
+const signInUrl = 'https://pic.imgdb.cn/item/675933e5d0e0a243d4e1b329.jpg'
+const signInOKUrl = 'https://pic.imgdb.cn/item/675933fad0e0a243d4e1b333.jpg'
 const features = [
   {
     path: "Chinese/select/select",
@@ -36,6 +38,8 @@ const {audioPlayer}=require('../../utils/playaudio.js');
 Page({
   data: {
     nameUrl,
+    signInUrl,
+    signInOKUrl,
     features,
     userInfo: {},
   },
@@ -46,6 +50,12 @@ Page({
       userInfo: userInfo
     });
     audioPlayer('/static/welcome.mp4')
+  },
+
+  signIn(){
+    this.setData({
+      signInUrl: signInOKUrl
+    })
   },
 
   goToPage: function (e) {

@@ -86,6 +86,21 @@
   font-size: 20px;
 }
 
+.sign-in-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.sign-in-img {
+  border-radius: 10px;
+  width:600px;
+  margin-left: 10px;
+}
+
 .task-title {
   font-size: 32px;
   font-weight: bold;
