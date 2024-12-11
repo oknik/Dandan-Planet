@@ -31,7 +31,7 @@
   -->
 
   <view class="sign-in-container">
-    <image class="sign-in-img" src="{{signInUrl}}" bindtap="signIn"></image>
+    <image class="sign-in-img" src="{{signUrl}}" bindtap="signIn"></image>
   </view>
 
   <view class="content">

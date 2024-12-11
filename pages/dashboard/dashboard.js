@@ -38,8 +38,7 @@ const {audioPlayer}=require('../../utils/playaudio.js');
 Page({
   data: {
     nameUrl,
-    signInUrl,
-    signInOKUrl,
+    signUrl: signInUrl,
     features,
     userInfo: {},
   },
@@ -54,7 +53,7 @@ Page({
 
   signIn(){
     this.setData({
-      signInUrl: signInOKUrl
+      signUrl: signInOKUrl
     })
   },
 
