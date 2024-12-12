@@ -2,6 +2,7 @@ const app = getApp();
 const nameUrl = 'https://pic.imgdb.cn/item/673488b3d29ded1a8c89b493.png'
 const signInUrl = 'https://pic.imgdb.cn/item/675933e5d0e0a243d4e1b329.jpg'
 const signInOKUrl = 'https://pic.imgdb.cn/item/675933fad0e0a243d4e1b333.jpg'
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
 const features = [
   {
     path: "Chinese/select/select",
@@ -46,15 +47,38 @@ Page({
   onLoad() {
     const userInfo = app.globalData.userInfo.getUserInfo();
     this.setData({
-      userInfo: userInfo
+      userInfo: userInfo,
+      signUrl: userInfo.userSignStatus === true ? signInOKUrl : signInUrl // 根据签到状态设置链接
     });
-    audioPlayer('/static/welcome.mp4')
+    console.log(userInfo.userSignStatus)
+    audioPlayer('/static/welcome.mp3')
   },
 
   signIn(){
-    this.setData({
-      signUrl: signInOKUrl
-    })
+    const userInfo = this.data.userInfo;
+    wx.request({
+      url: `${apiBaseUrl}/checkin`, // 后端签到接口
+      method: 'POST',
+      data: { phone_number: userInfo.userPhone },
+      success: (res) => {
+        if (res.statusCode === 200) {
+          this.setData({
+            signUrl: signInOKUrl,
+            'userInfo.userStars':res.data.response.stars
+          });
+          audioPlayer('/static/signin_success.mp3');
+        } else {
+          audioPlayer('/static/already_signed_in.mp3');
+        }
+      },
+      fail: (err) => {
+        wx.showToast({
+          title: '请求失败，请稍后再试',
+          icon: 'none',
+        });
+        console.error('签到请求失败:', err);
+      }
+    });
   },
 
   goToPage: function (e) {

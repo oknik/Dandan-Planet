@@ -1,12 +1,14 @@
 const backgroundUrl ='https://pic.imgdb.cn/item/6741f55bd29ded1a8c345248.jpg'
 const nameUrl = 'https://pic.imgdb.cn/item/6721e774d29ded1a8c1f12cf.png'
-
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
+const { sendVerificationCode } = require('../../../utils/verification.js');
 Page({
     data:{
         backgroundUrl,
         nameUrl,
         disabled: true,
         btnstate: 'default',
+        verificationCode: '',
     },
     // 监听手机号输入
     onPhoneChange(e) {
@@ -52,32 +54,63 @@ Page({
         //console.log('按钮不可点击');
         }
     },
-
-    // 发送验证码
-    sendVerificationCode() {
-        if (!this.data.userPhone) {
+    formSubmit(e) {
+      // 提交注册信息
+      const { userPhone, code, password } = this.data;
+      console.log('提交的数据：', { userPhone, code, password  });
+      // 假设验证码正确
+      if (this.data.verificationCode === this.data.code) {
+        wx.request({
+          url: `${apiBaseUrl}/auth/retrieve`,  // 后端接口地址
+          method: 'POST',
+          data: {
+            password: password,
+            phone_number: userPhone,
+          },
+          success: (res) => {
+            if (res.statusCode === 200) {
+              wx.showToast({
+                title: '重置密码成功',
+                icon: 'success',
+                duration: 2000,
+              });
+              setTimeout(() => {
+                wx.navigateTo({
+                    url: '/pages/index/index'
+                });
+              }, 500);
+            } else {
+              wx.showToast({
+                title: res.data.response.message,
+                icon: 'none',
+                duration: 2000,
+              });
+            }
+          },
+          fail: (err) => {
+            wx.showToast({
+              title: '注册失败，请稍后重试',
+              icon: 'none',
+              duration: 2000
+            });
+          }
+        });
+      } else {
         wx.showToast({
-            title: '请输入手机号',
-            icon: 'none',
-            duration: 2000
+          title: '验证码错误',
+          icon: 'none',
+          duration: 2000,
         });
-        return;
-        }
-        // 模拟验证码发送
-        this.setData({
-        verificationCode: '123456' // 假设发送的验证码是 123456
-        });
-        wx.showToast({
-        title: '验证码已发送',
-        icon: 'success',
-        duration: 2000
-        });
-        // // 开始倒计时
-        // this.startCountdown();
+      }
     },
-
     onCodeClick() {
-        this.sendVerificationCode();
+      sendVerificationCode(this.data.userPhone, (code) => {
+        this.setData({
+          verificationCode: code
+        });
+        // 开始倒计时
+        //this.startCountdown();
+      });
     },
 
 

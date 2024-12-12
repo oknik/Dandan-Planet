@@ -66,7 +66,7 @@ Page({
       });
   },
   
-  /*
+  
   onLogin(){
     console.log(this.data.activeTab)
     console.log(apiBaseUrl)
@@ -90,13 +90,12 @@ Page({
       this.loginWithCode();
     }
   },
-  */
 
-  onLogin(){
-    wx.navigateTo({
-        url: '/pages/dashboard/dashboard'
-      });
-  },
+  // onLogin(){
+  //   wx.navigateTo({
+  //       url: '/pages/dashboard/dashboard'
+  //     });
+  // },
 
   loginWithPassword() {
     wx.request({
@@ -110,7 +109,7 @@ Page({
         if (res.statusCode === 200) {
           const userData = res.data.response;
           const User = getApp().globalData.User;
-          const user = new User(userData.username, userData.level, userData.stars);
+          const user = new User(userData.username, userData.level, userData.stars,userData.sign_status,userData.userphone);
           getApp().setUserInfo(user);
           wx.navigateTo({
             url: '/pages/dashboard/dashboard', 
@@ -144,7 +143,7 @@ Page({
         if (res.statusCode === 200) {
           const userData = res.data.response;
           const User = getApp().globalData.User;
-          const user = new User(userData.username, userData.level, userData.stars);
+          const user = new User(userData.username, userData.level, userData.stars,userData.sign_status,userData.userphone);
           getApp().setUserInfo(user);
           wx.navigateTo({
             url: '/pages/dashboard/dashboard', 

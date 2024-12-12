@@ -7,13 +7,13 @@
     ></navigation-bar>
 
     <view class="image-row">
-        <image class="image" src="{{imageUrl}}"></image>
+        <image class="image" src="{{imageUrl}}" bindtap="playNumberAudio"></image>
         <image class="image" src="{{picUrl}}"></image>
     </view>
     
     <view class="text-row">
         <image class="text-pic" src="{{textUrl}}"></image>
-        <image class="play-button" src="{{playUrl}}" bindtap="playAudio"></image>
+        <image class="play-button" src="{{playUrl}}" bindtap="playDetailAudio"></image>
     </view>
 
     <view class="canvas-container">
