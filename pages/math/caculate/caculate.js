@@ -104,7 +104,6 @@ const imageData2 = [
     audioUrl:`${audioBaseUrl}/10.mp3`
   }
 ]
-
 const operators = [
     {
       name: "+",
@@ -119,6 +118,9 @@ const equalUrl = 'https://pic.imgdb.cn/item/674825c9d0e0a243d4d94a66.jpg'
 const circleUrl = 'https://pic.imgdb.cn/item/674829dfd0e0a243d4d95d20.png'
 const watermelonUrl = 'https://pic.imgdb.cn/item/67480077d0e0a243d4d885d8.png'
 const confirmUrl = 'https://pic.imgdb.cn/item/6748023bd0e0a243d4d88f35.jpg'
+const nextUrl = 'https://pic.imgdb.cn/item/675b0da4d0e0a243d4e30b33.png'
+const rightUrl = 'https://pic.imgdb.cn/item/675b077ad0e0a243d4e309f4.png'
+const wrongUrl = 'https://pic.imgdb.cn/item/675b0796d0e0a243d4e309f6.png'
 const apiBaseUrl=getApp().globalData.apiBaseUrl;
 Page({
     data: {
@@ -136,6 +138,9 @@ Page({
       circleUrl,
       watermelonUrl,
       confirmUrl,
+      nextUrl, 
+      rightUrl,
+      wrongUrl,
     },
   
     onLoad() {
@@ -175,9 +180,35 @@ Page({
           result: index
         });
         audioPlayer(this.data.imageData2[index].audioUrl)
-      },
+    },
 
-      onConfirm() {
+    showRightToast() {
+      this.setData({
+        showRightImage: true
+      });
+    
+      // 自动关闭弹框
+      setTimeout(() => {
+        this.setData({
+          showRightImage: false
+        });
+      }, 2000); // 持续2秒后关闭
+    },
+    
+    showWrongToast() {
+      this.setData({
+        showWrongImage: true
+      });
+    
+      // 自动关闭弹框
+      setTimeout(() => {
+        this.setData({
+          showWrongImage: false
+        });
+      }, 2000); // 持续2秒后关闭
+    },
+    
+    onConfirm() {
         const { num1, num2, result,operator } = this.data;
     
         wx.request({
@@ -199,9 +230,12 @@ Page({
                 });
                 //返回了结果和正确答案
                 console.log(result,correctAnswer)
-                if(result)
+                if(result){
                   audioPlayer(`/static/right.mp3`)
+                  this.showRightToast()
+                }
                 else{
+                  this.showWrongToast()
                   wx.request({
                     url: `${apiBaseUrl}/tts/get-text`,
                     method: 'POST',
@@ -226,5 +260,23 @@ Page({
                 console.error('请求失败', err);
             }
         });
+    },
+
+    onNext() {
+      // 重置页面状态
+      this.setData({
+        circleUrl: circleUrl,
+        choice: '',
+        numImage1: '',
+        numImage2: '',
+        operatorImage: '',
+        showRightImage: false,
+        showWrongImage: false,
+        result: 0
+      });
+      
+      // 生成新的随机数并更新页面
+      this.generateMathProblem()
     }
+  
   });
