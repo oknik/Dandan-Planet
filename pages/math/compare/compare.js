@@ -6,6 +6,9 @@ const smallUrl = 'https://pic.imgdb.cn/item/674afee9d0e0a243d4db75d3.jpg'
 const sameUrl = 'https://pic.imgdb.cn/item/674afef2d0e0a243d4db75d4.jpg'
 const questionUrl = 'https://pic.imgdb.cn/item/674825dad0e0a243d4d94a7e.jpg'
 const confirmUrl = 'https://pic.imgdb.cn/item/6748023bd0e0a243d4d88f35.jpg'
+const nextUrl = 'https://pic.imgdb.cn/item/675b0da4d0e0a243d4e30b33.png'
+const rightUrl = 'https://pic.imgdb.cn/item/675b077ad0e0a243d4e309f4.png'
+const wrongUrl = 'https://pic.imgdb.cn/item/675b0796d0e0a243d4e309f6.png'
 const imageData = [
   {
     name: "0",
@@ -65,6 +68,11 @@ Page({
     sameUrl,
     questionUrl,
     confirmUrl,
+    nextUrl,
+    rightUrl,
+    wrongUrl,
+    showRightImage: false,
+    showWrongImage: false,
     num1: 0,
     num2: 0,
     numImage1: '',
@@ -115,6 +123,32 @@ Page({
     audioPlayer(`${audioBaseUrl}/small.mp3`)
   },
 
+  showRightToast() {
+    this.setData({
+      showRightImage: true
+    });
+
+    // 自动关闭弹框
+    setTimeout(() => {
+      this.setData({
+        showRightImage: false
+      });
+    }, 2000); // 持续2秒后关闭
+  },
+
+  showWrongToast() {
+    this.setData({
+      showWrongImage: true
+    });
+
+    // 自动关闭弹框
+    setTimeout(() => {
+      this.setData({
+        showWrongImage: false
+      });
+    }, 2000); // 持续2秒后关闭
+  },
+
   onConfirm() {
     const { num1, num2, choice } = this.data;
 
@@ -136,9 +170,23 @@ Page({
             });
             //返回了结果和正确答案
             console.log(result,correctAnswer)
-            if(result)
+            if(result) {
               audioPlayer(`${audioBaseUrl}/right.mp3`)
-            else{
+              this.showRightToast()
+              /*
+              wx.showToast({
+                title: '答对啦!',
+                icon: 'success',
+                duration: 2000
+              })*/
+            } else {
+              this.showWrongToast()
+              /*
+              wx.showToast({
+                title: '答错啦!',
+                icon: 'error',
+                duration: 2000
+              })*/
               if(correctAnswer==='big')
                 audioPlayer(`${audioBaseUrl}/false/big.mp3`)
               else if(correctAnswer==='small')
@@ -151,6 +199,14 @@ Page({
             console.error('请求失败', err);
         }
     });
-}
+  },
 
-});
+  onNext() {
+    this.setData({
+      circleUrl: circleUrl,
+      choice: '',
+    });
+    this.generateRandomNumbers();
+  }
+
+}); 
