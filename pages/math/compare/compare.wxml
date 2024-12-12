@@ -57,5 +57,21 @@
         <image src="{{confirmUrl}}" class="choose-image" bindtap="onConfirm"></image>
     </view>
 
+    <view class='next-content'>
+        <image src="{{nextUrl}}" class="next-image" bindtap="onNext"></image>
+    </view>
+
+    <view wx:if="{{showRightImage}}" class="toast-container">
+        <view class="toast">
+            <image class="toast-image" src="{{rightUrl}}" />
+        </view>
+    </view>
+
+    <view wx:if="{{showWrongImage}}" class="toast-container">
+        <view class="toast">
+            <image class="toast-image" src="{{wrongUrl}}" />
+        </view>
+    </view>
+
 
 </view>

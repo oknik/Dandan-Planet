@@ -12,7 +12,7 @@
       "list": [
         {
           "name": "test",
-          "pathName": "pages/dashboard/dashboard",
+          "pathName": "pages/math/select/select",
           "query": "",
           "launchMode": "default",
           "scene": null

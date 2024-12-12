@@ -30,7 +30,7 @@ const features = [
   },
   {
     path: "selfCenter",
-    name: "个人中心",
+    name: "家长中心",
     imageUrl: "https://pic.imgdb.cn/item/67388efbd29ded1a8cb0baa0.png"
   }
 ];
