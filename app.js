@@ -2,11 +2,13 @@
 const avatarUrlDefault = 'https://pic.imgdb.cn/item/6728b79dd29ded1a8cd25236.jpg';
 
 class User {
-    constructor(name, level, stars, avatarUrl = avatarUrlDefault) {
+    constructor(name, level, stars, sign_status,phone,avatarUrl = avatarUrlDefault) {
       this.userName = name;
       this.userLevel = level;
       this.userStars = stars;
       this.userAvatar = avatarUrl;
+      this.userSignStatus= sign_status;
+      this.userPhone= phone;
     }
 
     // 更新等级
@@ -25,7 +27,9 @@ class User {
           userName: this.userName,
           userLevel: this.userLevel,
           userStars: this.userStars,
-          userAvatar: this.userAvatar
+          userAvatar: this.userAvatar,
+          userSignStatus: this.userSignStatus,
+          userPhone: this.userPhone,
         };
     }
 }

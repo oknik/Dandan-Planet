@@ -1,9 +1,13 @@
+const audioBaseUrl='/static/read'
+const audioReadUrl=`${audioBaseUrl}/read.mp3`
+const {audioPlayer}=require('../../../utils/playaudio.js');
 const chineseBookData = [
     {
         id: 1,
         name: '水果跑啊跑',
         url: 'https://pic.imgdb.cn/item/675557aed0e0a243d4dfed34.jpg',
         titleUrl: 'https://pic.imgdb.cn/item/675567d8d0e0a243d4dff819.png',
+        audioUrl:`${audioBaseUrl}/fruit.mp3`,
         contentUrl: [
             {
                 id: 1,
@@ -67,6 +71,7 @@ const chineseBookData = [
         name: '我要骑大马',
         url: 'https://pic.imgdb.cn/item/67545d13d0e0a243d4dfcd7f.jpg',
         titleUrl: 'https://pic.imgdb.cn/item/67556705d0e0a243d4dff7ea.png',
+        audioUrl:`${audioBaseUrl}/horse.mp3`,
         contentUrl: [
             {
                 id: 1,
@@ -132,6 +137,7 @@ const englishBookData = [
         name: 'Mike helps out',
         url: 'https://pic.imgdb.cn/item/67546012d0e0a243d4dfce04.jpg',
         titleUrl: 'https://pic.imgdb.cn/item/67554e1bd0e0a243d4dfe7e3.png',
+        audioUrl:`${audioBaseUrl}/mike.mp3`,
         contentUrl: [
             {
                 id: 1,
@@ -175,6 +181,7 @@ const englishBookData = [
         name: 'Splat',
         url: 'https://pic.imgdb.cn/item/6754648cd0e0a243d4dfcf1f.png',
         titleUrl: 'https://pic.imgdb.cn/item/67554e6fd0e0a243d4dfe808.png',
+        audioUrl:`${audioBaseUrl}/splat.mp3`,
         contentUrl: [
             {
                 id: 1,
@@ -240,10 +247,13 @@ Page({
 
       const titleData = this.getTitle(id);
       const contentData = this.getContent(id);
+      const audioData = this.getAudio(id);
       this.setData({
         titleUrl: titleData,
-        contentUrl: contentData
+        contentUrl: contentData,
+        audioUrl:audioData
       });
+      audioPlayer([audioData,audioReadUrl]);
     },
     
     getTitle: function(id) {
@@ -265,6 +275,15 @@ Page({
             return englishBook.contentUrl;
         }
     },
+    getAudio: function(id) {
+      const chineseBook = chineseBookData.find(item => item.id === parseInt(id));
+      const englishBook = englishBookData.find(item => item.id === parseInt(id));
+      if (chineseBook) {
+          return chineseBook.audioUrl;
+      } else if (englishBook) {
+          return englishBook.audioUrl;
+      }
+  },
 
     playAudio: function (e) {
         const audioUrl = e.currentTarget.dataset.audio;

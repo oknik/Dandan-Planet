@@ -1,6 +1,8 @@
 // pages/English/letter-detail/letter-detail.js
 const eraserUrl = 'https://pic.imgdb.cn/item/673cc329d29ded1a8c322f63.png';
 const audioBtUrl = 'https://pic.imgdb.cn/item/6757e7f3d0e0a243d4e0f927.png';
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
+const {audioPlayer}=require('../../../utils/playaudio.js');
 const AllData = [
   {
     letter: "A",
@@ -200,6 +202,8 @@ Page({
     eraserUrl,
     audioBtUrl,
     isErasing: false, // 橡皮擦状态
+    audioFilePath: '', 
+    previousCharacter: '',
   },
   canvas: null, // 保存 canvas 对象到类实例
   ctx: null,    // 保存绘图上下文到类实例
@@ -387,6 +391,33 @@ Page({
     console.log(text);
 
     //将text转换为语音...
+    if (text === this.data.previousText && this.data.audioFilePath) {
+      // 如果相同且有音频文件路径，直接播放之前的音频
+      audioPlayer(`/audio/${this.data.audioFilePath}`)
+      return;  // 直接返回，不重新请求
+    }
+      wx.request({
+        url: `${apiBaseUrl}/tts/get-text`,
+        method: 'POST',
+        data: {
+            text: text,
+            voice_type: 3,
+        },
+        success: (res) => {
+            const response = res.data.response;
+            const filename = response.data;
+            console.log(res.data.response)
+            console.log(filename)
+            audioPlayer(`/audio/${filename}`)
+            this.setData({
+              previousCharacter: text,
+              audioFilePath: filename,
+            });
+        },
+        fail: (err) => {
+            console.error('请求失败', err);
+        }
+      });
 
 
   },
