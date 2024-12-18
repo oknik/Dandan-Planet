@@ -67,35 +67,35 @@ Page({
   },
   
   
-  onLogin(){
-    console.log(this.data.activeTab)
-    console.log(apiBaseUrl)
-    if (this.data.activeTab === 'password') {
-      if (!this.data.userPhone || !this.data.userPassword) {
-        wx.showToast({
-          title: '请输入手机号和密码',
-          icon: 'none',
-        });
-        return;
-      }
-      this.loginWithPassword();
-    } else if (this.data.activeTab === 'code') {
-      if (!this.data.userPhone || !this.data.userCode) {
-        wx.showToast({
-          title: '请输入手机号和验证码',
-          icon: 'none',
-        });
-        return;
-      }
-      this.loginWithCode();
-    }
-  },
-
   // onLogin(){
-  //   wx.navigateTo({
-  //       url: '/pages/dashboard/dashboard'
-  //     });
+  //   console.log(this.data.activeTab)
+  //   console.log(apiBaseUrl)
+  //   if (this.data.activeTab === 'password') {
+  //     if (!this.data.userPhone || !this.data.userPassword) {
+  //       wx.showToast({
+  //         title: '请输入手机号和密码',
+  //         icon: 'none',
+  //       });
+  //       return;
+  //     }
+  //     this.loginWithPassword();
+  //   } else if (this.data.activeTab === 'code') {
+  //     if (!this.data.userPhone || !this.data.userCode) {
+  //       wx.showToast({
+  //         title: '请输入手机号和验证码',
+  //         icon: 'none',
+  //       });
+  //       return;
+  //     }
+  //     this.loginWithCode();
+  //   }
   // },
+
+  onLogin(){
+    wx.navigateTo({
+        url: '/pages/dashboard/dashboard'
+      });
+  },
 
   loginWithPassword() {
     wx.request({

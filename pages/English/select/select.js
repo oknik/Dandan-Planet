@@ -18,7 +18,9 @@ Page({
   },
 
   onWord(){
-
+    wx.navigateTo({
+      url: '/pages/English/word-select/word-select'
+    });
   },
 
   
