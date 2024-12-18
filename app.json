@@ -19,7 +19,9 @@
     "pages/English/select/select",
     "pages/read/select/select",
     "pages/read/detail/detail",
-    "pages/draw/draw"
+    "pages/draw/draw",
+    "pages/English/word-select/word-select",
+    "pages/English/word-learning/word-learning"
   ],
   "window": {
     "navigationBarTextStyle": "black",

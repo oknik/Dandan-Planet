@@ -1,24 +1,18 @@
-<!--pages/English/letter-select/letter-select.wxml-->
+<!--pages/English/word-learning/word-learning.wxml-->
 <view class="container">
   <navigation-bar
     class="navigation-bar"
     back="{{true}}"
     background="#ffffff00"
     color="#333"
-  ></navigation-bar>
+	></navigation-bar>
+	
+  <!--主题图片-->
+  <image class="theme-img" src="{{themeUrl}}"  mode="aspectFill"/>
 
-  <view class="title">
-    <image class="title-pic" src="{{titleUrl}}"></image>
-  </view>
-
-  <!-- 字母展示部分 -->
-  <view class="letter-container">
-  <block wx:for="{{lettersForCurrentPage}}" wx:key="letter">
-    <view class="letter-item">
-      <image class="letter-image" src="{{item.imageUrl}}" mode="aspectFit" bindtap="onLetterClick" data-letter="{{item.letter}}" />
-    </view>
-  </block>
-  </view>
+  <!--单词卡片-->
+  <image class="word-img" src="{{currentWord ? currentWord.wordUrl : ''}}"  mode="aspectFill" bindtap="playAudio" bindtouchstart="touchStart" 
+  bindtouchend="touchEnd" />
 
   <!-- 分页器 -->
   <view class="pagination">
@@ -26,5 +20,4 @@
     <text class="page-info">第 {{currentPage}} 页 / 共 {{totalPages}} 页</text>
     <image class="page-button" src="{{currentPage === totalPages ? nextBtnDisabledImage : nextBtnImage}}" bindtap="nextPage" />
   </view>
-
 </view>
