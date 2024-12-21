@@ -29,7 +29,9 @@
 
   <!-- 工具栏 -->
   <view class="toolbar">
+    <!--
     <button bindtap="toggleEraser">{{ isErasing ? '切换到画笔' : '切换到橡皮擦' }}</button>
+    -->
     <image class="clear-button" bindtap="clearCanvas" src="{{eraserUrl}}"></image>
   </view>
 

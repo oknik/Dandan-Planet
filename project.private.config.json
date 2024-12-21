@@ -12,7 +12,7 @@
       "list": [
         {
           "name": "test",
-          "pathName": "pages/math/select/select",
+          "pathName": "pages/English/letter-select/letter-select",
           "query": "",
           "launchMode": "default",
           "scene": null
