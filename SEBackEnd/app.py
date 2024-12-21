@@ -4,7 +4,18 @@ from models import User
 import pymysql
 pymysql.install_as_MySQLdb()
 
+from seed_data import insert_subjects, insert_chinese_hanzi, insert_chinese_pinyin, insert_math_resources, \
+    insert_letters, insert_themes, insert_words, insert_picture_books
 
+def seed_data():
+    insert_subjects()
+    insert_chinese_hanzi()
+    insert_chinese_pinyin()
+    insert_math_resources()
+    insert_letters()
+    insert_themes()
+    insert_words()
+    insert_picture_books()
 def create_app(*args, **kwargs):
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost/se_project'
@@ -31,6 +42,7 @@ def create_app(*args, **kwargs):
             user.set_password("13967220273")
             db.session.add(user)
             db.session.commit()
+        seed_data()
     return app
 
 

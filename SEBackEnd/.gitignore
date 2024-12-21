@@ -2,3 +2,4 @@
 __pycache__/
 audio/
 generate_speech.py
+send_sms.py
