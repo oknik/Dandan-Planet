@@ -1,5 +1,5 @@
 // app.js
-const avatarUrlDefault = 'https://pic.imgdb.cn/item/6728b79dd29ded1a8cd25236.jpg';
+const avatarUrlDefault = 'https://pic.imgdb.cn/item/6766b4a7d0e0a243d4e7ceb0.jpg';
 
 class User {
     constructor(name, level, stars, sign_status,phone,avatarUrl = avatarUrlDefault) {
@@ -36,7 +36,7 @@ class User {
 
 App({
     globalData: {
-      // userInfo: new User("kk", 3, 257, avatarUrlDefault),
+      //userInfo: new User("kk", 3, 257, avatarUrlDefault),
       userInfo:null,
       User: User, 
       apiBaseUrl:'https://www.ddxq.asia',

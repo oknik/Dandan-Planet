@@ -14,7 +14,7 @@
 }
 
 .letter-container{
-  margin-top: 20px;
+  margin-top: 80px;
   position: relative;
   display: inline-block;
 }
@@ -55,8 +55,8 @@
 
 .clear-button {
   position: absolute;
-  bottom: 10px;
-  right: 240px;
+  bottom: 70px;
+  right: 350px;
   width: 100px;
   height: 100px;
 }

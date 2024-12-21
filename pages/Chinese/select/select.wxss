@@ -14,21 +14,21 @@
 }
 
 .title-pic{
-  width: 65%;
-  height: 65%;
+  width: 450px;
+  height: 150px;
   margin-top:5%;
 }
 
 .pinyin-pic{
-  width: 80%;
-  height: 100%;
-  margin-top: 8%;
+  width: 600px;
+  height: 200px;
+  margin-top: 15%;
 }
 
 .hanzi-pic{
-  width: 80%;
-  height: 100%;
-  margin-top: 3%;
+  width: 600px;
+  height: 200px;
+  margin-top: 15%;
 }
 
 .poetry-pic{
