@@ -203,7 +203,7 @@ Page({
     audioBtUrl,
     isErasing: false, // 橡皮擦状态
     audioFilePath: '', 
-    previousCharacter: '',
+    previousText: '',
   },
   canvas: null, // 保存 canvas 对象到类实例
   ctx: null,    // 保存绘图上下文到类实例
@@ -410,7 +410,7 @@ Page({
             console.log(filename)
             audioPlayer(`/audio/${filename}`)
             this.setData({
-              previousCharacter: text,
+              previousText: text,
               audioFilePath: filename,
             });
         },

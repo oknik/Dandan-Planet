@@ -1,4 +1,6 @@
 // pages/English/word-learning/word-learning.js
+const apiBaseUrl=getApp().globalData.apiBaseUrl;
+const {audioPlayer}=require('../../../utils/playaudio.js');
 const wordData=[
   {
     theme: "weather",
@@ -469,6 +471,8 @@ Page({
     nextBtnDisabledImage: 'https://pic.imgdb.cn/item/674955b8d0e0a243d4dabfaa.png',
     touchStartX: 0, // 记录触摸起始位置
     touchEndX: 0, // 记录触摸结束位置
+    audioFilePath: '', 
+    previousText: '',
   },
 
   onLoad(options) {
@@ -555,8 +559,32 @@ Page({
     const text = currentWord.word;
     console.log(text);
     // text存放的是需要转语音的文本
-
-
-    
+    if (text === this.data.previousText && this.data.audioFilePath) {
+      // 如果相同且有音频文件路径，直接播放之前的音频
+      audioPlayer(`/audio/${this.data.audioFilePath}`)
+      return;  // 直接返回，不重新请求
+    }
+      wx.request({
+        url: `${apiBaseUrl}/tts/get-text`,
+        method: 'POST',
+        data: {
+            text: text,
+            voice_type: 3,
+        },
+        success: (res) => {
+            const response = res.data.response;
+            const filename = response.data;
+            console.log(res.data.response)
+            console.log(filename)
+            audioPlayer(`/audio/${filename}`)
+            this.setData({
+              previousText: text,
+              audioFilePath: filename,
+            });
+        },
+        fail: (err) => {
+            console.error('请求失败', err);
+        }
+      });   
   }
 })
