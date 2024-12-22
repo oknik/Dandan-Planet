@@ -9,9 +9,11 @@
       <text class="user-name">{{userInfo.userName}}</text>
       <view class="user-level">
         <text>Lv{{userInfo.userLevel}}</text>
+        <!--
         <view class="progress-bar">
           <view class="progress" style="width: 25%;"></view>
         </view>
+      -->
       </view>
       <view class="stars">
         <text>星星：{{userInfo.userStars}}⭐️</text>
