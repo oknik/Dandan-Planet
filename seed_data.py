@@ -1,8 +1,8 @@
 from sqlalchemy import text
 
 from database import db
-from models import Subject, ChineseHanzi, ChinesePinyin, MathResource, Book, BookContent, Letters, \
-    WordThemes, Words
+from models import Subject, ChineseHanzi, ChinesePinyin, MathResource, Letters, \
+    WordThemes, Words, ResourceType, PictureBook, PictureBookContent
 import json
 
 
@@ -25,6 +25,23 @@ def insert_subjects():
             new_subject = Subject(name=subject["name"])
             db.session.add(new_subject)
     db.session.commit()
+    resources = [
+        {"subject_id": 1, "name": "chinese_hanzi"},
+        {"subject_id": 1, "name": "chinese_pinyin"},
+        {"subject_id": 2, "name": "math"},
+        {"subject_id": 3, "name": "english_letter"},
+        {"subject_id": 3, "name": "english_word"},
+        {"subject_id": 4, "name": "fruit"},
+        {"subject_id": 4, "name": "horse"},
+        {"subject_id": 4, "name": "mike"},
+        {"subject_id": 4, "name": "splat"},
+        {"subject_id": 5, "name": "drawing"}
+    ]
+    for resource in resources:
+        new_subject = ResourceType(subject_id=resource["subject_id"],
+                                   name=resource["name"])
+        db.session.add(new_subject)
+    db.session.commit()
 
 
 # 插入语文资源数据
@@ -32,7 +49,6 @@ def insert_chinese_hanzi():
     truncate_table("chinese_hanzi")
     chinese_resources = [
         {
-            "subject_id": 1,
             "difficulty": "easy",
             "content": json.dumps([
                 '一', '二', '三', '四', '五', '六', '七', '八', '九', '十',
@@ -43,7 +59,6 @@ def insert_chinese_hanzi():
             ], ensure_ascii=False)
         },
         {
-            "subject_id": 1,
             "difficulty": "medium",
             "content": json.dumps([
                 '家', '国', '同', '有', '无', '济', '电', '我', '你', '他',
@@ -54,7 +69,6 @@ def insert_chinese_hanzi():
             ], ensure_ascii=False)
         },
         {
-            "subject_id": 1,
             "difficulty": "hard",
             "content": json.dumps([
                 '商', '越', '复', '影', '酸', '甜', '苦', '辣', '咸', '感',
@@ -67,7 +81,6 @@ def insert_chinese_hanzi():
     ]
     for resource in chinese_resources:
         new_resource = ChineseHanzi(
-            subject_id=resource["subject_id"],
             difficulty=resource["difficulty"],
             content=resource["content"])
         db.session.add(new_resource)
@@ -84,7 +97,7 @@ def insert_chinese_pinyin():
                          '/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20v'
                          '/OnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3N'
                          '/vZnRfY29tL0VReHNKNjhDczVsT28zNXlZeGVKOEJ3QnJkeWxxYTRsWjhHR3o1Zy1iTEtVZGc.mp3'
-        },# todo
+        },  # todo
     ]
     for resource in chinese_resources:
         new_resource = ChinesePinyin(
@@ -133,7 +146,7 @@ def insert_math_resources():
             "write_url": 'https://pic.imgdb.cn/item/6738a670d29ded1a8cc6fb11.png',
             "audio_url": '0.mp3',
             "audio_number_url": '0.mp3'
-        },# todo
+        },  # todo
 
     ]
     for resource in math_resources:
@@ -167,14 +180,14 @@ def insert_letters():
             "letter_url": 'https://pic.imgdb.cn/item/6757e047d0e0a243d4e0f5dc.png',
             "word_url": 'https://pic.imgdb.cn/item/6757e0b9d0e0a243d4e0f5ff.png',
             "write_url": 'https://pic.imgdb.cn/item/6757e254d0e0a243d4e0f6ff.png',
-        },# todo
+        },
         {
             "letter": "B",
             "word": "banana",
             "letter_url": 'https://pic.imgdb.cn/item/6757e28cd0e0a243d4e0f706.png',
             "word_url": 'https://pic.imgdb.cn/item/6757e2b5d0e0a243d4e0f714.png',
             "write_url": 'https://pic.imgdb.cn/item/6757e30ad0e0a243d4e0f72a.png',
-        },  
+        },
         {
             "letter": "C",
             "word": "cat",
@@ -259,7 +272,6 @@ def insert_letters():
             "word_url": 'https://pic.imgdb.cn/item/6758454dd0e0a243d4e17ebf.png',
             "write_url": 'https://pic.imgdb.cn/item/67584579d0e0a243d4e17ed1.png',
         },
-
         {
             "letter": "O",
             "word": "orange",
@@ -343,7 +355,7 @@ def insert_letters():
             "letter_url": 'https://pic.imgdb.cn/item/67586da2d0e0a243d4e188aa.png',
             "word_url": 'https://pic.imgdb.cn/item/67586dd2d0e0a243d4e188b6.png',
             "write_url": 'https://pic.imgdb.cn/item/67586e02d0e0a243d4e188c0.png',
-        },
+        }
     ]
     for resource in english_resources:
         new_resource = Letters(
@@ -364,7 +376,7 @@ def insert_themes():
             "theme": "weather",
             "url": 'https://pic.imgdb.cn/item/67613705d0e0a243d4e52fbd.png',  # word-select里
             "themeUrl": 'https://pic.imgdb.cn/item/676173f0d0e0a243d4e582b0.png',  # word-learning里
-        },# todo
+        },
         {
             "theme": "month",
             "url": 'https://pic.imgdb.cn/item/67613736d0e0a243d4e52fd4.png',
@@ -373,7 +385,7 @@ def insert_themes():
         {
             "theme": "food",
             "url": 'https://pic.imgdb.cn/item/6761375cd0e0a243d4e52ff3.png',
-            "themeUrl":  'https://pic.imgdb.cn/item/676263e8d0e0a243d4e5a86e.png',
+            "themeUrl": 'https://pic.imgdb.cn/item/676263e8d0e0a243d4e5a86e.png',
         },
         {
             "theme": "color",
@@ -453,12 +465,12 @@ def insert_words():
         {
             "theme_id": 1,
             "word": "sunny",
-            "word_url": 'https://pic.imgdb.cn/item/67619e49d0e0a243d4e58c42.jpg',
-        },# todo
+            "wordUrl": 'https://pic.imgdb.cn/item/67619e49d0e0a243d4e58c42.jpg',
+        },
         {
             "theme_id": 1,
-            "word":"rainy",
-            "word_url":'https://pic.imgdb.cn/item/67619e71d0e0a243d4e58c44.jpg',
+            "word": "rainy",
+            "word_url": 'https://pic.imgdb.cn/item/67619e71d0e0a243d4e58c44.jpg',
         },
         {
             "theme_id": 1,
@@ -477,18 +489,18 @@ def insert_words():
         },
         {
             "theme_id": 2,
-            "word":"January",
-            "word_url":'https://pic.imgdb.cn/item/676261d1d0e0a243d4e5a7ea.jpg',
+            "word": "January",
+            "word_url": 'https://pic.imgdb.cn/item/676261d1d0e0a243d4e5a7ea.jpg',
         },
         {
             "theme_id": 2,
-            "word":"February",
-            "word_url":'https://pic.imgdb.cn/item/676261e1d0e0a243d4e5a7f2.jpg',
+            "word": "February",
+            "word_url": 'https://pic.imgdb.cn/item/676261e1d0e0a243d4e5a7f2.jpg',
         },
         {
             "theme_id": 2,
-            "word":"March",
-            "word_url":'https://pic.imgdb.cn/item/676261f4d0e0a243d4e5a7f5.jpg',
+            "word": "March",
+            "word_url": 'https://pic.imgdb.cn/item/676261f4d0e0a243d4e5a7f5.jpg',
         },
         {
             "theme_id": 2,
@@ -502,7 +514,7 @@ def insert_words():
         },
         {
             "theme_id": 2,
-            "word":"June",
+            "word": "June",
             "word_url": 'https://pic.imgdb.cn/item/67626271d0e0a243d4e5a804.jpg',
         },
         {
@@ -538,37 +550,37 @@ def insert_words():
         {
             "theme_id": 3,
             "word": "egg",
-            "word_url":'https://pic.imgdb.cn/item/67626483d0e0a243d4e5a890.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/67626483d0e0a243d4e5a890.jpg'
         },
         {
             "theme_id": 3,
             "word": "cookie",
-            "word_url":'https://pic.imgdb.cn/item/6762648fd0e0a243d4e5a891.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/6762648fd0e0a243d4e5a891.jpg'
         },
         {
             "theme_id": 3,
             "word": "bread",
-            "word_url":'https://pic.imgdb.cn/item/676264a2d0e0a243d4e5a896.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/676264a2d0e0a243d4e5a896.jpg'
         },
         {
             "theme_id": 3,
             "word": "cake",
-            "word_url":'https://pic.imgdb.cn/item/676264bbd0e0a243d4e5a899.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/676264bbd0e0a243d4e5a899.jpg'
         },
         {
             "theme_id": 3,
             "word": "burger",
-            "word_url":'https://pic.imgdb.cn/item/676264cad0e0a243d4e5a89b.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/676264cad0e0a243d4e5a89b.jpg'
         },
         {
             "theme_id": 3,
             "word": "candy",
-            "word_url":'https://pic.imgdb.cn/item/676264e6d0e0a243d4e5a8a0.jpg'
+            "word_url": 'https://pic.imgdb.cn/item/676264e6d0e0a243d4e5a8a0.jpg'
         },
         {
             "theme_id": 4,
-            "word":"yellow",
-            "word_url":'https://pic.imgdb.cn/item/676265a4d0e0a243d4e5a8df.png', 
+            "word": "yellow",
+            "word_url": 'https://pic.imgdb.cn/item/676265a4d0e0a243d4e5a8df.png',
         },
         {
             "theme_id": 4,
@@ -602,7 +614,7 @@ def insert_words():
         },
         {
             "theme_id": 4,
-            "word":"orange",
+            "word": "orange",
             "word_url": 'https://pic.imgdb.cn/item/6762674fd0e0a243d4e5a98b.png'
         },
         {
@@ -612,38 +624,38 @@ def insert_words():
         },
         {
             "theme_id": 5,
-            "word":"cap",
-            "word_url":'https://pic.imgdb.cn/item/67626852d0e0a243d4e5a9e7.png'
+            "word": "cap",
+            "word_url": 'https://pic.imgdb.cn/item/67626852d0e0a243d4e5a9e7.png'
         },
         {
             "theme_id": 5,
-            "word":"coat",
-            "word_url":'https://pic.imgdb.cn/item/6762686ad0e0a243d4e5a9f5.png'
+            "word": "coat",
+            "word_url": 'https://pic.imgdb.cn/item/6762686ad0e0a243d4e5a9f5.png'
         },
         {
             "theme_id": 5,
-            "word":"dress",
-            "word_url":'https://pic.imgdb.cn/item/67626885d0e0a243d4e5a9fc.png'
+            "word": "dress",
+            "word_url": 'https://pic.imgdb.cn/item/67626885d0e0a243d4e5a9fc.png'
         },
         {
             "theme_id": 5,
-            "word":"gloves",
-            "word_url":'https://pic.imgdb.cn/item/67626914d0e0a243d4e5aa3b.png'
+            "word": "gloves",
+            "word_url": 'https://pic.imgdb.cn/item/67626914d0e0a243d4e5aa3b.png'
         },
         {
             "theme_id": 5,
-            "word":"hoody",
-            "word_url":'https://pic.imgdb.cn/item/6762696cd0e0a243d4e5aa50.png'
+            "word": "hoody",
+            "word_url": 'https://pic.imgdb.cn/item/6762696cd0e0a243d4e5aa50.png'
         },
         {
             "theme_id": 5,
-            "word":"jeans",
-            "word_url":'https://pic.imgdb.cn/item/676269a3d0e0a243d4e5aa55.png'
+            "word": "jeans",
+            "word_url": 'https://pic.imgdb.cn/item/676269a3d0e0a243d4e5aa55.png'
         },
         {
             "theme_id": 5,
-            "word":"shirt",
-            "word_url":'https://pic.imgdb.cn/item/676269d9d0e0a243d4e5aa60.png'
+            "word": "shirt",
+            "word_url": 'https://pic.imgdb.cn/item/676269d9d0e0a243d4e5aa60.png'
         },
         {
             "theme_id": 6,
@@ -677,22 +689,22 @@ def insert_words():
         },
         {
             "theme_id": 7,
-            "word":"spring",
+            "word": "spring",
             "word_url": 'https://pic.imgdb.cn/item/67626cb6d0e0a243d4e5abca.png'
         },
         {
             "theme_id": 7,
-            "word":"summer",
+            "word": "summer",
             "word_url": 'https://pic.imgdb.cn/item/67626ce0d0e0a243d4e5abd3.png'
         },
         {
             "theme_id": 7,
-            "word":"autumn",
+            "word": "autumn",
             "word_url": 'https://pic.imgdb.cn/item/67626cfdd0e0a243d4e5abd6.png'
         },
         {
             "theme_id": 7,
-            "word":"winter",
+            "word": "winter",
             "word_url": 'https://pic.imgdb.cn/item/67626d22d0e0a243d4e5abe2.png'
         },
         {
@@ -910,7 +922,7 @@ def insert_words():
         new_resource = Words(
             theme_id=resource["theme_id"],
             word=resource["word"],
-            word_url=resource[""word_url""],
+            word_url=resource["wordUrl"],
         )
         db.session.add(new_resource)
     db.session.commit()
@@ -921,10 +933,11 @@ def insert_picture_books():
     base_url = '/static/read'
     books = [
         {
+            "resource_type_id": 6,
             "name": "水果跑啊跑",
             "url": 'https://pic.imgdb.cn/item/675557aed0e0a243d4dfed34.jpg',
             "titleUrl": 'https://pic.imgdb.cn/item/675567d8d0e0a243d4dff819.png',
-            "audioUrl": f'{base_url}/ fruit.mp3',
+            "audioUrl": f'{base_url}/fruit.mp3',
             "content": json.dumps([
                 {
                     "id": 1,
@@ -936,14 +949,220 @@ def insert_picture_books():
                     "url": "https://pic.imgdb.cn/item/67555fc0d0e0a243d4dff3bc.jpg",
                     "audio": "https://image.limaogushi.com/file/picture-books/audio/2a/2a6f6a88efa49b5bf9ace68ef6b68dfd.mp3"
                 },
-                # todo
+                {
+                    "id": 3,
+                    "url": "https://pic.imgdb.cn/item/67555fccd0e0a243d4dff3c4.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/19/197f2089682c149c344ecdd5e6ef02f7.mp3"
+                },
+                {
+                    "id": 4,
+                    "url": "https://pic.imgdb.cn/item/67555fd3d0e0a243d4dff3ca.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/dc/dcf6c5baa1944ab03443c30fb8fb62d0.mp3"
+                },
+                {
+                    "id": 5,
+                    "url": "https://pic.imgdb.cn/item/67555fe2d0e0a243d4dff3cf.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/c4/c45f6c684f678d463e2fbb07579af453.mp3"
+                },
+                {
+                    "id": 6,
+                    "url": "https://pic.imgdb.cn/item/67555ff3d0e0a243d4dff3dc.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/48/48c1f7131178a467cedef5b8a7f0bd4e.mp3"
+                },
+                {
+                    "id": 7,
+                    "url": "https://pic.imgdb.cn/item/6755600fd0e0a243d4dff3ec.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/7b/7b7da225a162c9086934462b518723b0.mp3"
+                },
+                {
+                    "id": 8,
+                    "url": "https://pic.imgdb.cn/item/67556019d0e0a243d4dff3f1.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/23/23e02f1417dc2c3cc7494287bf2ee93e.mp3"
+                },
+                {
+                    "id": 9,
+                    "url": "https://pic.imgdb.cn/item/67556020d0e0a243d4dff3f6.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/b3/b3cd5cea241af335b64f0db7d0964a2f.mp3"
+                },
+                {
+                    "id": 10,
+                    "url": "https://pic.imgdb.cn/item/67556040d0e0a243d4dff406.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/d8/d8a6fa9f5bab3eb3372c588424765972.mp3"
+                },
+                {
+                    "id": 11,
+                    "url": "https://pic.imgdb.cn/item/67556047d0e0a243d4dff409.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/fe/feb8962d844d470a4d9ef30ee37e85ff.mp3"
+                }
             ])
         },
-        # todo
+        {
+            "resource_type_id": 7,
+            "name": '我要骑大马',
+            "url": 'https://pic.imgdb.cn/item/67545d13d0e0a243d4dfcd7f.jpg',
+            "titleUrl": 'https://pic.imgdb.cn/item/67556705d0e0a243d4dff7ea.png',
+            "audioUrl": f'{base_url}/horse.mp3',
+            "contentUrl": json.dumps([
+                {
+                    "id": 1,
+                    "url": "https://pic.imgdb.cn/item/67556723d0e0a243d4dff7f1.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/58/58d4bd97a845471c95d7d06d646e6b02.mp3"
+                },
+                {
+                    "id": 2,
+                    "url": "https://pic.imgdb.cn/item/6755672bd0e0a243d4dff7f3.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/f2/f2daf040dc45f266a5b233b330f0402e.mp3"
+                },
+                {
+                    "id": 3,
+                    "url": "https://pic.imgdb.cn/item/67556731d0e0a243d4dff7f5.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/bd/bd62c1dc945c493bb23934c4e8bea2d3.mp3"
+                },
+                {
+                    "id": 4,
+                    "url": "https://pic.imgdb.cn/item/67556736d0e0a243d4dff7f6.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/4c/4cb1c611dc3f32749aa1fe74bd3e5773.mp3"
+                },
+                {
+                    "id": 5,
+                    "url": "https://pic.imgdb.cn/item/6755673cd0e0a243d4dff7f7.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/1c/1c60772b5eddc2e2ea7a55b7e2390b4a.mp3"
+                },
+                {
+                    "id": 6,
+                    "url": "https://pic.imgdb.cn/item/67556742d0e0a243d4dff7f8.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/85/85f93c6df53bf57da6686e86966d3e30.mp3"
+                },
+                {
+                    "id": 7,
+                    "url": "https://pic.imgdb.cn/item/6755674ad0e0a243d4dff7fb.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/5c/5c18b9ceee2fa038793e25414776b470.mp3"
+                },
+                {
+                    "id": 8,
+                    "url": "https://pic.imgdb.cn/item/67556753d0e0a243d4dff7fc.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/e3/e3896e0fe1a4c993b7e4e08b21aebd05.mp3"
+                },
+                {
+                    "id": 9,
+                    "url": "https://pic.imgdb.cn/item/67556759d0e0a243d4dff7fe.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/05/05dedb01ca17f91d6e6fcff88ad84d75.mp3"
+                },
+                {
+                    "id": 10,
+                    "url": "https://pic.imgdb.cn/item/6755675fd0e0a243d4dff800.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/42/425ba629357f1fa0c50bee0c3d66e4ff.mp3"
+                },
+                {
+                    "id": 11,
+                    "url": "https://pic.imgdb.cn/item/67556766d0e0a243d4dff802.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/b6/b6d7ad87b80443917fe948a75a2ecf43.mp3"
+                }
+            ])
+        },
+        {
+            "resource_type_id": 8,
+            "name": 'Mike helps out',
+            "url": 'https://pic.imgdb.cn/item/67546012d0e0a243d4dfce04.jpg',
+            "titleUrl": 'https://pic.imgdb.cn/item/67554e1bd0e0a243d4dfe7e3.png',
+            "audioUrl": f'{base_url}/mike.mp3',
+            "contentUrl": json.dumps([
+                {
+                    "id": 1,
+                    "url": "https://pic.imgdb.cn/item/67554d0fd0e0a243d4dfe791.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/41/79/dfe458b4-35d1-4908-a6f3-9376385ce5ec.mp3"
+                },
+                {
+                    "id": 2,
+                    "url": "https://pic.imgdb.cn/item/67554d1ed0e0a243d4dfe795.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/bb/7f/a94bbe1d-a76b-4fcc-b529-e27097e41735.mp3"
+                },
+                {
+                    "id": 3,
+                    "url": "https://pic.imgdb.cn/item/67554d24d0e0a243d4dfe799.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/d0/57/a85cffd4-05ef-45fc-b9d2-b9043e42c852.mp3"
+                },
+                {
+                    "id": 4,
+                    "url": "https://pic.imgdb.cn/item/67554d2bd0e0a243d4dfe79a.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/10/31/8f5e3c74-8c65-4ce3-a225-79afd907dc8a.mp3"
+                },
+                {
+                    "id": 5,
+                    "url": "https://pic.imgdb.cn/item/67554d32d0e0a243d4dfe79c.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/ac/8d/9e4c4a03-5694-4a58-b0d7-2c636b681987.mp3"
+                },
+                {
+                    "id": 6,
+                    "url": "https://pic.imgdb.cn/item/67554d38d0e0a243d4dfe79e.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/00/c2/5066ae47-1f05-4b70-a565-f88bedb4dedd.mp3"
+                },
+                {
+                    "id": 7,
+                    "url": "https://pic.imgdb.cn/item/67554d40d0e0a243d4dfe79f.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/f9/48/c7eed3fe-b038-4fd9-9faa-020606338716.mp3"
+                },
+            ])
+        },
+        {
+            "resource_type_id": 9,
+            "name": 'Splat',
+            "url": 'https://pic.imgdb.cn/item/6754648cd0e0a243d4dfcf1f.png',
+            "titleUrl": 'https://pic.imgdb.cn/item/67554e6fd0e0a243d4dfe808.png',
+            "audioUrl": f'{base_url}/splat.mp3',
+            "contentUrl": json.dumps([
+                {
+                    "id": 1,
+                    "url": "https://pic.imgdb.cn/item/675466c5d0e0a243d4dfcf92.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/e4/5e/b3c53388-3291-4720-92c8-092e19f4c860.mp3"
+                },
+                {
+                    "id": 2,
+                    "url": "https://pic.imgdb.cn/item/675466d1d0e0a243d4dfcf95.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/f3/12/7b21f127-42b9-4a90-90b3-7c50a543a0d8.mp3"
+                },
+                {
+                    "id": 3,
+                    "url": "https://pic.imgdb.cn/item/675466dcd0e0a243d4dfcf96.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/c3/6d/5c8a513e-b707-4636-a605-29528c8d5516.mp3"
+                },
+                {
+                    "id": 4,
+                    "url": "https://pic.imgdb.cn/item/675466e6d0e0a243d4dfcf98.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/d8/36/f0c389aa-fcc3-4697-a19a-c9dafdb318a3.mp3"
+                },
+                {
+                    "id": 5,
+                    "url": "https://pic.imgdb.cn/item/675466f1d0e0a243d4dfcf99.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/1e/d8/c861723b-d6b1-4b9f-9f35-ba015a8c786f.mp3"
+                },
+                {
+                    "id": 6,
+                    "url": "https://pic.imgdb.cn/item/675466f9d0e0a243d4dfcfa4.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/e1/0b/decef66b-b370-4105-956d-224136d35f27.mp3"
+                },
+                {
+                    "id": 7,
+                    "url": "https://pic.imgdb.cn/item/67546702d0e0a243d4dfcfbc.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/83/c0/9a137886-d6c5-4210-a129-d0fb875425fd.mp3"
+                },
+                {
+                    "id": 8,
+                    "url": "https://pic.imgdb.cn/item/6754670bd0e0a243d4dfcfc1.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/e9/a6/e36b551d-3adc-415c-be67-4d78c547f9df.mp3"
+                },
+                {
+                    "id": 9,
+                    "url": "https://pic.imgdb.cn/item/67546722d0e0a243d4dfcfc3.jpg",
+                    "audio": "https://image.limaogushi.com/file/picture-books/audio/c9/60/a22e37b9-8b10-4425-b6d4-fea836e745f4.mp3"
+                }
+            ])
+        },
     ]
     for book in books:
         # 插入书本信息
-        new_book = Book(
+        new_book = PictureBook(
+            resource_type_id=book["resource_type_id"],
             name=book["name"],
             url=book["url"],
             title_url=book["titleUrl"],
@@ -955,7 +1174,7 @@ def insert_picture_books():
 
         # 插入书本内容
         for content in content_data:
-            new_content = BookContent(
+            new_content = PictureBookContent(
                 book_id=new_book.id,
                 order_id=content["id"],
                 url=content["url"],
@@ -964,8 +1183,6 @@ def insert_picture_books():
             db.session.add(new_content)
 
     db.session.commit()
-
-
 
 # def seed_data():
 #     insert_subjects()
