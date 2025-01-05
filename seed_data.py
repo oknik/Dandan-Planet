@@ -93,11 +93,238 @@ def insert_chinese_pinyin():
         {
             "name": 'a',
             "image_url": 'https://pic.imgdb.cn/item/6757cdb4d0e0a243d4e0e95c.jpg',
-            "audio_url": 'https://dlink.host/musics'
-                         '/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20v'
-                         '/OnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3N'
-                         '/vZnRfY29tL0VReHNKNjhDczVsT28zNXlZeGVKOEJ3QnJkeWxxYTRsWjhHR3o1Zy1iTEtVZGc.mp3'
-        },  # todo
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VReHNKNjhDczVsT28zNXlZeGVKOEJ3QnJkeWxxYTRsWjhHR3o1Zy1iTEtVZGc.mp3'
+        },
+        {
+            "name": 'o',
+            "image_url": 'https://pic.imgdb.cn/item/6757d0dad0e0a243d4e0e9d6.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VWRnZQVVo5QUZkSm12OHJVMzNQNWxZQjhxSnNvWVppbFNlMjZmbGFFbnR2U0E.mp3'
+        },
+        {
+            "name": 'e',
+            "image_url": 'https://pic.imgdb.cn/item/6757d0e2d0e0a243d4e0e9d8.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkQ3pFVllTdWVORnNHQ2d1Vjl5R3FvQkdtOTk5YVhZMm93dUMwUkxBaF8yR0E.mp3'
+        },
+        {
+            "name": 'i',
+            "image_url": 'https://pic.imgdb.cn/item/6757d0f9d0e0a243d4e0e9db.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VhdzhEc0dsQzk5Qm5UU1lVbjE1bU44QmpDSnozY1JaTERqYlJaanIyMDRkekE.mp3'
+        },
+        {
+            "name": 'u',
+            "image_url": 'https://pic.imgdb.cn/item/6757d104d0e0a243d4e0e9de.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VZNzctQWRfWmpwTW1LT3JocS1hZ2NvQm9Ic0lBRVdMbXlrUGFOMFlFUGhXTlE.mp3'
+        },
+        {
+            "name": 'v',
+            "image_url": 'https://pic.imgdb.cn/item/6757d10ed0e0a243d4e0e9e0.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VYTTNKMVNSQ1VoQmtDVXBBX3hZenhZQkVITHI1T3NxNTNsLWNCRzltNzQ3OXc.mp3'
+        },
+        {
+            "name": 'ai',
+            "image_url": 'https://pic.imgdb.cn/item/6757d118d0e0a243d4e0e9e4.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VVdnh3XzBzOGk1T292OFE4VzlJVjVNQmo2cWNRNl9iWEk4UkhWeUF0TzlqTVE.mp3'
+        },
+        {
+            "name": 'ei',
+            "image_url": 'https://pic.imgdb.cn/item/6757d125d0e0a243d4e0e9e5.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VSQXVFV1dzcV9WUHFxNWpFQzYxb3lZQnFsMDNoNGFvVXBIVGhCeS1YRzFoNmc.mp3'
+        },
+        {
+            "name": 'ui',
+            "image_url": 'https://pic.imgdb.cn/item/6757d131d0e0a243d4e0e9e9.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkU004VkdiNVRwQnVOWEljU0kwb2l3QnZHZVdCV1YxeDlQb1VJekZhM0c2Z0E.mp3'
+        },
+        {
+            "name": 'ao',
+            "image_url": 'https://pic.imgdb.cn/item/6757d13cd0e0a243d4e0e9ec.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VUVHpaMjFMRzJwT2pKdGdKZHFHWEZFQllhYmZ4WjhGa2NDaVQtU3VLTktoZ0E.mp3'
+        },
+        {
+            "name": 'ou',
+            "image_url": 'https://pic.imgdb.cn/item/6757d146d0e0a243d4e0e9ee.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VjOC1UQXQ2TWtGT3QyMUprQTMxVzRnQjNlRFBhamc1V1M0UHV6Zl9CUEU2TFE.mp3'
+        },
+        {
+            "name": 'iu',
+            "image_url": 'https://pic.imgdb.cn/item/6757d152d0e0a243d4e0e9f0.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VYeXotNlMxY0xWTmtnQ2k4M25ZNEpnQkRSdHd2WWpUaHlNNDNpVFJKUVRxY2c.mp3'
+        },
+        {
+            "name": 'ie',
+            "image_url": 'https://pic.imgdb.cn/item/6757d15dd0e0a243d4e0e9f3.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0ViMjJJYTFiN3g1Sm1saFRfeFYyLWpFQkdDZmpYTXhuSjB4TUhzMWdVQ25WVkE.mp3'
+        },
+        {
+            "name": 've',
+            "image_url": 'https://pic.imgdb.cn/item/6757d16dd0e0a243d4e0e9f7.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VZcEVfbjJhRmpCS2lxQkc5dE9JM0p3QlVTWHFQeWpFbE5BUVNYcHQwNjJYVVE.mp3'
+        },
+        {
+            "name": 'er',
+            "image_url": 'https://pic.imgdb.cn/item/6757d17ad0e0a243d4e0e9fb.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkRUstc2hJaGl4RHBBNUdBX2dOcHdJQmNFcFdzLUZYeTh6Mlhqd2FYVE5sWWc.mp3'
+        },
+        {
+            "name": 'an',
+            "image_url": 'https://pic.imgdb.cn/item/6757d186d0e0a243d4e0e9fe.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VTaUhKeW90VEg5T2tIaWhLZzd5eTFBQmIxU0RSUERSbXhiUmtqc3FPVjNKLWc.mp3'
+        },
+        {
+            "name": 'en',
+            "image_url": 'https://pic.imgdb.cn/item/6757d19cd0e0a243d4e0ea08.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkY09KeXFERGIxUGhBSW1FQTgwWms0QkdYcno4ZDN0ZFNIR2JUWFA3dG10T2c.mp3'
+        },
+        {
+            "name": 'in',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1aad0e0a243d4e0ea11.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VTaGtPeHdwbEZOTGhsUmRydDZUeHRvQlpNeDJ4c0M3eGtMQmpzTVlaQldfZVE.mp3'
+        },
+        {
+            "name": 'un',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1c1d0e0a243d4e0ea14.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VWNWtpZGRKeTRoS3RwdjZRSjVOcmRrQklsdW55N1NpSmZwQmpHSjFMZ0RodVE.mp3'
+        },
+        {
+            "name": 'vn',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1d4d0e0a243d4e0ea1a.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VjRko3NGxZSFdoRGduSGtEZlRxd1JzQnhaLUlTT0hBVE13TEVUdjQ4LUxIdHc.mp3'
+        },
+        {
+            "name": 'ang',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1f9d0e0a243d4e0ea25.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VRcmxlLW9qZFhsT3MwY1JaYWdqYUhJQlJobXQ3amFGaERwTHJ2ZG4xUHp6Y3c.mp3'
+        {
+            "name": 'eng',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1aad0e0a243d4e0ea2b.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VlMmlka2F5NFR0THVPVjd6bzVWQW5BQlYzTVpIYWxuSWROd18tblVoNVNGdlE.mp3'
+        },
+        {
+            "name": 'ing',
+            "image_url": 'https://pic.imgdb.cn/item/6757d219d0e0a243d4e0ea33.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VaX1ozeTFHZndCT25hOHRiVWNkNXIwQjQ3aENKWldRemFocVRiaVA3Q0pkZXc.mp3'
+        },
+        {
+            "name": 'ong',
+            "image_url": 'https://pic.imgdb.cn/item/6757d229d0e0a243d4e0ea3d.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VRdjlMaVhiM3o1SG5aMm9uWWtvMHc0Qi1TR3N0ZkxJcHl3aVRDNFFpQ2xSamc.mp3'
+        },
+        {
+            "name": 'b',
+            "image_url": 'https://pic.imgdb.cn/item/6757d26dd0e0a243d4e0ea4d.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkeXVGR203YkY5R3Voa3d6TE92OG9VQjhpWTNIal9aWV9UTWZyUmhtYURYMWc.mp3'
+        },
+        {
+            "name": 'p',
+            "image_url": 'https://pic.imgdb.cn/item/6757d274d0e0a243d4e0ea4e.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VWenN0bmMtRF9aRnBvYVJybzBWdEVBQmYySUM5bmpsU2lXMmV4cGJsd3dZVHc.mp3'
+        },
+        {
+            "name": 'm',
+            "image_url": 'https://pic.imgdb.cn/item/6757d27ed0e0a243d4e0ea51.jpg',
+            "audio_url":'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VTTm5McUhuN1MxSWtEQk04SFI2SFprQllib0R4LXlFUlBsMC1RUEMwSEpuY2c.mp3'
+        },
+        {
+            "name": 'f',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2a0d0e0a243d4e0ea56.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VlNkVDUjNLNHp0TXFOSVp3aE41dmVNQkZCT2Z1RmlmNTl1VEdSaVpTNFVvMlE.mp3'
+        },
+        {
+            "name": 'd',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2cdd0e0a243d4e0ea6e.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VTemR5R1U4WWhOTGkwVURLamZzVjdNQnNUZlJLamRlR2YwdmRNbjY1TVlfQlE.mp3'
+        },
+        {
+            "name": 't',
+            "image_url": 'https://pic.imgdb.cn/item/6757d1aad0e0a243d4e0ea75.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VXOWNPOVBnbGVoTHI0bEl0LTM0UmJBQk9jRTNFSFZyYTU3SV9EZ0wwSFlsNkE.mp3'
+        },
+        {
+            "name": 'n',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2e2d0e0a243d4e0ea76.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0ViRFJQcnlxLVJaT2xrd2VCbGloYVlVQjV0NHBQTl9VM0puLUVyOHppcVJLalE.mp3'
+        },
+        {
+            "name": 'l',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2f3d0e0a243d4e0ea78.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0ViQUh3MU1ITWd4SW92c2xGMHNCYVNnQnYzbTh1WDQ1NlJxZURBMlMxcXBxWEE.mp3'
+        },
+        {
+            "name": 'g',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2acd0e0a243d4e0ea5a.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VmcmlWZllFOExCQWhXRjBwaXd2cTJZQkRLV1R4NDVwbzBZS0dBcVFfMVJoOEE.mp3'
+        },
+        {
+            "name": 'k',
+            "image_url": 'https://pic.imgdb.cn/item/6757d2b9d0e0a243d4e0ea5b.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VRT191VVo3SzF4RHNsN2xLRnFzYi1VQmpSY1lJMGxZc3pzWEhMd3NVS1dmSkE.mp3'
+        },
+        {
+            "name": 'h',
+            "image_url": 'https://pic.imgdb.cn/item/6757d315d0e0a243d4e0ea7e.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VmX2pUenpheGM1T3FBa3lReDN4WHdNQkZyb1VReEF5SzlSWEJzaG1vcnZEOEE.mp3'
+        },
+        {
+            "name": 'j',
+            "image_url": 'https://pic.imgdb.cn/item/6757d323d0e0a243d4e0ea85.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VmdWhRUGNZNGtKSXBzZkozNG5qdXNZQlQ4akFkQnRqc1c5SkpkME45MmdKOEE.mp3'
+        },
+        {
+            "name": 'q',
+            "image_url": 'https://pic.imgdb.cn/item/6757d32dd0e0a243d4e0ea87.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkZTFqR3czSVI5QWhvWUxGSTU5SEhzQksyV29VLTdhbFVaWDEwTG1iZGsxMVE.mp3'
+        },
+        {
+            "name": 'x',
+            "image_url": 'https://pic.imgdb.cn/item/6757d338d0e0a243d4e0ea90.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VRZUR4RUNfV1E5SGtWaVkxUXctSzRjQmI4QXR0UDU4VzFGOWJMZ3A0TzlOVVE.mp3'
+        },
+        {
+            "name": 'zh',
+            "image_url": 'https://pic.imgdb.cn/item/6757d342d0e0a243d4e0eaa7.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0ViWFRfUk5IVm1oTGlROVNWQVlVbmVvQlNXUjN6a2V3Q01aVWZlMnlKWWlmX2c.mp3'
+        },
+        {
+            "name": 'ch',
+            "image_url": 'https://pic.imgdb.cn/item/6757d34dd0e0a243d4e0eabd.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VXSVFWeU44VFcxRHUyWGNBeG94OEM4QjlGRjJXVFlIampaSDQzS1gxak0wVFE.mp3'
+        },
+        {
+            "name": 'sh',
+            "image_url": 'https://pic.imgdb.cn/item/6757d35bd0e0a243d4e0ead3.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VieWJzS2hZT0FwRHNsOVBYSklLS1BBQlZHdWhDLUNNakU3QWY1Zko1dWFoblE.mp3'
+        },
+        {
+            "name": 'r',
+            "image_url": 'https://pic.imgdb.cn/item/6757d367d0e0a243d4e0eae4.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VhYjRzd2VZSlV4SHJxQXV0eE9jdGZzQllob1NPQnRsTkZnd29BMVFPSWZrTUE.mp3'
+        },
+        {
+            "name": 'z',
+            "image_url": 'https://pic.imgdb.cn/item/6757d377d0e0a243d4e0eb0d.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VUc0RsclpXM0I5Q2haZlVndlVEdzdrQkp1SVlKTnVpbkhfYUlPTi1yRERzVVE.mp3'
+        },
+        {
+            "name": 'c',
+            "image_url": 'https://pic.imgdb.cn/item/6757d381d0e0a243d4e0eb28.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0Vac25DQ081SWdKS3JXekdOSkdLOF9BQnU5TDUzQW9OcFB1TmlTSzM4LWdobGc.mp3'
+        },
+        {
+            "name": 's',
+            "image_url": 'https://pic.imgdb.cn/item/6757d38dd0e0a243d4e0eb45.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VVTjlpNUltM0VwSmxhLUFXWFpfdXI4QlQzUl82TUtWNkhCaDktOHRacDRoZ2c.mp3'
+        },
+        {
+            "name": 'y',
+            "image_url": 'https://pic.imgdb.cn/item/6757d397d0e0a243d4e0eb55.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VZZUFtQ3VZc0RaRHRTeVRRcTNtTjlZQmlMSUE0aVM1aFpqNzAwNDR2TFg4VEE.mp3'
+        },
+        {
+            "name": 'w',
+            "image_url": 'https://pic.imgdb.cn/item/6757d3a3d0e0a243d4e0eb67.jpg',
+            "audio_url": 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VVc05ielo4amJWSmtWTlNma241Z000QjBUTkJlZmlFNUt2TnEzSzB1dEo0VVE.mp3'
+        },
+
     ]
     for resource in chinese_resources:
         new_resource = ChinesePinyin(
@@ -114,29 +341,137 @@ def insert_math_resources():
     base_url1 = '/static/number'
     base_url2 = '/static/detail'
     math_resources = [
-        # calculate中imgdata
         {
             "type": "imgdata",
             "name": '0',
             "image_url": 'https://pic.imgdb.cn/item/67481044d0e0a243d4d8dabe.png'
         },
-        # ...
-        # calculate中imgdata2
+        {
+            "type": "imgdata",
+            "name": '1',
+            "image_url": 'https://pic.imgdb.cn/item/67481063d0e0a243d4d8dba1.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '2',
+            "image_url": 'https://pic.imgdb.cn/item/67481073d0e0a243d4d8dc1b.png'
+        },
+        {
+            "type": "imgdata",
+            "name": '3',
+            "image_url": 'https://pic.imgdb.cn/item/67481087d0e0a243d4d8dc90.png'
+        },
+        {
+            "type": "imgdata",
+            "name": '4',
+            "image_url": 'https://pic.imgdb.cn/item/67481094d0e0a243d4d8dcf5.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '5',
+            "image_url": 'https://pic.imgdb.cn/item/674810a2d0e0a243d4d8dd49.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '6',
+            "image_url": 'https://pic.imgdb.cn/item/674810abd0e0a243d4d8dd93.png'
+        },
+        {
+            "type": "imgdata",
+            "name": '7',
+            "image_url": 'https://pic.imgdb.cn/item/674810b5d0e0a243d4d8dddf.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '8',
+            "image_url": 'https://pic.imgdb.cn/item/674810c6d0e0a243d4d8de3f.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '9',
+            "image_url": 'https://pic.imgdb.cn/item/674810d5d0e0a243d4d8dea3.jpg'
+        },
+        {
+            "type": "imgdata",
+            "name": '10',
+            "image_url": 'https://pic.imgdb.cn/item/674810efd0e0a243d4d8df55.jpg'
+        },
         {
             "type": "imgdata_border",
             "name": '0',
             "image_url": 'https://pic.imgdb.cn/item/674b0259d0e0a243d4db7662.jpg',
             "audio_url": '0.mp3'
         },
-        # ...
-        # calculate中operators
+        {
+            "type": "imgdata_border",
+            "name": '1',
+            "image_url": 'https://pic.imgdb.cn/item/674b0312d0e0a243d4db767b.jpg',
+            "audio_url": '1.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '2',
+            "image_url": 'https://pic.imgdb.cn/item/674b0393d0e0a243d4db768d.jpg',
+            "audio_url": '2.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '3',
+            "image_url": 'https://pic.imgdb.cn/item/674b039bd0e0a243d4db7691.jpg',
+            "audio_url": '3.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '4',
+            "image_url": 'https://pic.imgdb.cn/item/674b0404d0e0a243d4db769d.jpg',
+            "audio_url": '4.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '5',
+            "image_url": 'https://pic.imgdb.cn/item/674b040ed0e0a243d4db769e.jpg',
+            "audio_url": '5.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '6',
+            "image_url": 'https://pic.imgdb.cn/item/674b0417d0e0a243d4db769f.jpg',
+            "audio_url": '6.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '7',
+            "image_url": 'https://pic.imgdb.cn/item/674b0582d0e0a243d4db76c6.jpg',
+            "audio_url": '7.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '8',
+            "image_url": 'https://pic.imgdb.cn/item/674b058bd0e0a243d4db76c9.jpg',
+            "audio_url": '8.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '9',
+            "image_url": 'https://pic.imgdb.cn/item/674b0594d0e0a243d4db76ca.jpg"',
+            "audio_url": '9.mp3'
+        },
+        {
+            "type": "imgdata_border",
+            "name": '10',
+            "image_url": 'https://pic.imgdb.cn/item/674b059cd0e0a243d4db76cc.jpg',
+            "audio_url": '10.mp3'
+        },
         {
             "type": "operators",
             "name": '+',
             "image_url": 'https://pic.imgdb.cn/item/67484cb2d0e0a243d4da2acb.jpg',
         },
-        # ...
-        # details中
+        {
+            "type": "operators",
+            "name": '-',
+            "image_url": 'https://pic.imgdb.cn/item/67484cbcd0e0a243d4da2af4.jpg',
+        },
         {
             "type": "imgdata_detail",
             "name": 'zero',
@@ -146,7 +481,107 @@ def insert_math_resources():
             "write_url": 'https://pic.imgdb.cn/item/6738a670d29ded1a8cc6fb11.png',
             "audio_url": '0.mp3',
             "audio_number_url": '0.mp3'
-        },  # todo
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'zero',
+            "image_url": 'https://pic.imgdb.cn/item/6742037ad29ded1a8c405f1c.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb78fd29ded1a8c2293b3.jpg',
+            "text_url": 'https://pic.imgdb.cn/item/67420214d29ded1a8c3f3d3c.png',
+            "write_url": 'https://pic.imgdb.cn/item/6738a670d29ded1a8cc6fb11.png',
+            "audio_url": '0.mp3',
+            "audio_number_url": '0.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'one',
+            "image_url": 'https://pic.imgdb.cn/item/674203b2d29ded1a8c408cb6.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673c17b5d29ded1a8c4fbd0c.png',
+            "text_url": 'https://pic.imgdb.cn/item/67420259d29ded1a8c3f718a.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cbc74d29ded1a8c29cca5.png',
+            "audio_url": '1.mp3',
+            "audio_number_url": '1.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'two',
+            "image_url": 'https://pic.imgdb.cn/item/67420400d29ded1a8c40cf51.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673c1864d29ded1a8c504410.png',
+            "text_url": 'https://pic.imgdb.cn/item/67420467d29ded1a8c412701.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cbcb0d29ded1a8c2a2698.png',
+            "audio_url": '2.mp3',
+            "audio_number_url": '2.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'three',
+            "image_url": 'https://pic.imgdb.cn/item/674205a9d29ded1a8c42810d.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673c193ed29ded1a8c50d8cf.png',
+            "text_url": 'https://pic.imgdb.cn/item/67420488d29ded1a8c414238.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cbcfdd29ded1a8c2a983b.png',
+            "audio_url": '3.mp3',
+            "audio_number_url": '3.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'four',
+            "image_url": 'https://pic.imgdb.cn/item/6736f106d29ded1a8c5f09a8.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673c19f8d29ded1a8c516ad0.png',
+            "text_url": 'https://pic.imgdb.cn/item/674205f4d29ded1a8c42b34f.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc436d29ded1a8c332c74.png',
+            "audio_url": '4.mp3',
+            "audio_number_url": '4.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'five',
+            "image_url": 'https://pic.imgdb.cn/item/6736f19cd29ded1a8c5fb35b.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb1c9d29ded1a8c19c795.png',
+            "text_url": 'https://pic.imgdb.cn/item/6742062cd29ded1a8c42de9b.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc46ad29ded1a8c33895a.png',
+            "audio_url": '5.mp3',
+            "audio_number_url": '5.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'six',
+            "image_url": 'https://pic.imgdb.cn/item/67420664d29ded1a8c430997.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb751d29ded1a8c225223.png',
+            "text_url": 'https://pic.imgdb.cn/item/674206a7d29ded1a8c433a12.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc482d29ded1a8c33b408.png',
+            "audio_url": '6.mp3',
+            "audio_number_url": '6.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'seven',
+            "image_url": 'https://pic.imgdb.cn/item/67420707d29ded1a8c437a23.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb219d29ded1a8c1a4aea.png',
+            "text_url": 'https://pic.imgdb.cn/item/67420739d29ded1a8c439f3b.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc491d29ded1a8c33c351.png',
+            "audio_url": '7.mp3',
+            "audio_number_url": '7.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'eight',
+            "image_url": 'https://pic.imgdb.cn/item/67420781d29ded1a8c43d57c.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb24dd29ded1a8c1a9824.png',
+            "text_url": 'https://pic.imgdb.cn/item/674207aed29ded1a8c43fbd0.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc49fd29ded1a8c33cf29.png',
+            "audio_url": '8.mp3',
+            "audio_number_url": '8.mp3'
+        },
+        {
+            "type": "imgdata_detail",
+            "name": 'nine',
+            "image_url": 'https://pic.imgdb.cn/item/674207ebd29ded1a8c44371e.png',
+            "pic_url": 'https://pic.imgdb.cn/item/673cb271d29ded1a8c1ad5aa.png',
+            "text_url": 'https://pic.imgdb.cn/item/6742085fd29ded1a8c449113.png',
+            "write_url": 'https://pic.imgdb.cn/item/673cc4b3d29ded1a8c33dfc0.png',
+            "audio_url": '9.mp3',
+            "audio_number_url": '9.mp3'
+        },
 
     ]
     for resource in math_resources:
