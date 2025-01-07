@@ -35,8 +35,15 @@
         </view>
 
         <view class="content-container">
+            <!--
              <image class="character-img" src="{{characterUrl}}"></image>
+            -->
+             <view class="chinese-container">
+                <text class="chinese-content">{{ chineseContent }}</text>
+            </view>
+            <view class="english-container">
+                <text class="english-content">{{ englishContent }}</text>
+            </view>
         </view>
     </view>
-
 </view>

@@ -15,7 +15,9 @@ Page({
     clearUrl,
     submitUrl,
     questionUrl,
-    characterUrl
+    characterUrl,
+    chineseContent: '是什么呢？',
+    englishContent: 'What is it?'
   },
   canvas: null,
   ctx: null,
@@ -136,7 +138,7 @@ Page({
               // 获取到图片 URL 后，更新界面
               this.setData({
                 questionUrl: data.image_url,
-                tag = data.tag
+                englishContent: this.tag
               });
             } else {
               console.error("Error: No image URL in response");
