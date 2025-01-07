@@ -7,7 +7,7 @@ const questionUrl = 'https://pic.imgdb.cn/item/674af70dd0e0a243d4db74bc.jpg'
 const characterUrl = 'https://pic.imgdb.cn/item/674afc97d0e0a243d4db757e.jpg'
 
 const apiBaseUrl = getApp().globalData.apiBaseUrl;
-
+const {audioPlayer} = require('../../utils/playaudio.js');
 Page({
   data: {
     titleUrl,
@@ -120,9 +120,46 @@ Page({
     this.ctx.fillStyle = '#FFFFFF'; // 设置为白色
     this.ctx.fillRect(0, 0, width, height);
   },
-
+  playVoice(entag,chtag){
+      wx.request({
+        url: `${apiBaseUrl}/tts/get-text`,
+        method: 'POST',
+        data: {
+            text: chtag,
+            voice_type: 2,
+        },
+        success: (res) => {
+            const response1 = res.data.response;
+            const filename1 = response1.data;
+            console.log(res.data.response)
+            console.log(filename1)
+            wx.request({
+              url: `${apiBaseUrl}/tts/get-text`,
+              method: 'POST',
+              data: {
+                  text: entag,
+                  voice_type: 6,
+              },
+              success: (res) => {
+                  const response2 = res.data.response;
+                  const filename2 = response2.data;
+                  console.log(res.data.response)
+                  console.log(filename2)
+                  audioPlayer([`/audio/${filename1}`,`/audio/${filename2}`])
+              },
+              fail: (err) => {
+                  console.error('请求失败', err);
+              }
+            });
+        },
+        fail: (err) => {
+            console.error('请求失败', err);
+        }
+      });
+    },
   // 提交绘画的草图
   submit() {
+    console.log("submitted")
     wx.canvasToTempFilePath({
       canvas: this.canvas,
       success: (res) => {
@@ -141,6 +178,7 @@ Page({
                 englishContent: data.entag,
                 chineseContent:data.chtag,
               });
+              this.playVoice(data.entag,data.chtag);
             } else {
               console.error("Error: No image URL in response");
             }
