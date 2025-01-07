@@ -23,6 +23,7 @@ Page({
   isErasing: false,
   startX: 0,
   startY: 0,
+  tag: null,
 
   onLoad() {
     wx.createSelectorQuery()
@@ -134,7 +135,8 @@ Page({
             if (data.image_url) {
               // 获取到图片 URL 后，更新界面
               this.setData({
-                questionUrl: data.image_url
+                questionUrl: data.image_url,
+                tag = data.tag
               });
             } else {
               console.error("Error: No image URL in response");
