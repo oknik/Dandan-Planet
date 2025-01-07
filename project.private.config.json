@@ -12,7 +12,7 @@
       "list": [
         {
           "name": "test",
-          "pathName": "pages/draw/draw",
+          "pathName": "pages/Chinese/pinyin/pinyin",
           "query": "",
           "launchMode": "default",
           "scene": null
