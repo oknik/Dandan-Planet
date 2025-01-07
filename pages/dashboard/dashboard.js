@@ -57,7 +57,7 @@ Page({
   signIn(){
     const userInfo = this.data.userInfo;
     wx.request({
-      url: `${apiBaseUrl}/checkin`, // 后端签到接口
+      url: `${apiBaseUrl}/checkin/`, // 后端签到接口
       method: 'POST',
       data: { phone_number: userInfo.userPhone },
       success: (res) => {
