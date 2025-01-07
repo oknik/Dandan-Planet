@@ -138,7 +138,8 @@ Page({
               // 获取到图片 URL 后，更新界面
               this.setData({
                 questionUrl: data.image_url,
-                englishContent: this.tag
+                englishContent: data.entag,
+                chineseContent:data.chtag,
               });
             } else {
               console.error("Error: No image URL in response");
