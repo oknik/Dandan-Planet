@@ -1,8 +1,8 @@
 // pages/Chinese/hanzi-learn/hanzi-learn.js
 const createHanziWriterContext = require('hanzi-writer-miniprogram');
 const {pinyin} = require('pinyin-pro');
-const apiBaseUrl=getApp().globalData.apiBaseUrl;
-const {audioPlayer}=require('../../../utils/playaudio.js');
+const apiBaseUrl = getApp().globalData.apiBaseUrl;
+const {audioPlayer} = require('../../../utils/playaudio.js');
 Page({
   data: {
     character: '',
