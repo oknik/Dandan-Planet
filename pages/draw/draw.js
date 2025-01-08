@@ -160,6 +160,17 @@ Page({
   // 提交绘画的草图
   submit() {
     console.log("submitted")
+    /*
+    wx.showToast({
+        title: '提交成功',
+        icon: 'success', 
+        duration: 2000,
+    });*/
+    wx.showToast({
+        title: '匹配中...',
+        icon: 'loading',
+        duration: 100000,
+    });
     wx.canvasToTempFilePath({
       canvas: this.canvas,
       success: (res) => {
@@ -172,7 +183,8 @@ Page({
             console.log('Upload success:', uploadRes);
             const data = JSON.parse(uploadRes.data);
             if (data.image_url) {
-              // 获取到图片 URL 后，更新界面
+              // 获取到图片URL后，更新界面
+              wx.hideToast(); // 关闭加载提示
               this.setData({
                 questionUrl: data.image_url,
                 englishContent: data.entag,
